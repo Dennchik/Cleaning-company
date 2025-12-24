@@ -1,0 +1,138 @@
+@use 'variables-icon' as *;
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3elod9');
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3elod9#iefix')
+      format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3elod9')
+      format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3elod9')
+      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3elod9##{$icomoon-font-family}')
+      format('svg');
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  speak: never;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  line-height: 1;
+  text-transform: none;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+}
+
+.icon-sign-out {
+  &::before {
+    content: $icon-sign-out;
+  }
+}
+.icon-hand-shake {
+  &::before {
+    content: $icon-hand-shake;
+  }
+}
+.icon-financial-system {
+  &::before {
+    content: $icon-financial-system;
+  }
+}
+.icon-management {
+  &::before {
+    content: $icon-management;
+  }
+}
+.icon-youtube-square {
+  &::before {
+    content: $icon-youtube-square;
+  }
+}
+.icon-youtube {
+  &::before {
+    content: $icon-youtube;
+  }
+}
+.icon-whatsapp {
+  &::before {
+    content: $icon-whatsapp;
+  }
+}
+.icon-vk-brand {
+  &::before {
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &::before {
+    content: $icon-telegram-fly;
+  }
+}
+.icon-unlink {
+  &::before {
+    content: $icon-unlink;
+  }
+}
+.icon-angle-left {
+  &::before {
+    content: $icon-angle-left;
+  }
+}
+.icon-angle-right {
+  &::before {
+    content: $icon-angle-right;
+  }
+}
+.icon-angle-up {
+  &::before {
+    content: $icon-angle-up;
+  }
+}
+.icon-angle-down {
+  &::before {
+    content: $icon-angle-down;
+  }
+}
+.icon-minus {
+  &::before {
+    content: $icon-minus;
+  }
+}
+.icon-plus {
+  &::before {
+    content: $icon-plus;
+  }
+}
+.icon-published-changes {
+  &::before {
+    content: $icon-published-changes;
+  }
+}
+.icon-check {
+  &::before {
+    content: $icon-check;
+  }
+}
+.icon-youtube-lg {
+  &::before {
+    content: $icon-youtube-lg;
+  }
+}
+.icon-dzen {
+  &::before {
+    content: $icon-dzen;
+  }
+}

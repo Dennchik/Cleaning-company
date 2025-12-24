@@ -1,0 +1,123 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-about {
+  // .section-about__body
+  &__body {
+    overflow: hidden;
+    padding-block: 6rem !important;
+
+    @include screen-490 {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  // .section-about__title
+  &__title {
+    width: 100%;
+    margin-bottom: 12px;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: $font-color-title;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .section-about__content
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 620px);
+
+    @include minmax-920-1920 {
+      grid-template-columns:
+        1fr
+        calc(320px + (620 - 320) * ((100vw - 920px) / (1920 - 920)));
+      gap: 6rem;
+    }
+
+    @include screen-920 {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    @include screen-490 {
+      gap: 3rem;
+    }
+  }
+
+  // .section-about__column
+  &__column {
+    width: 100%;
+
+    &:nth-child(2) {
+      .section-about__image {
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: 1 / 3;
+      color: #243444;
+    }
+  }
+
+  // .section-about__image
+  &__image {
+    position: relative;
+    width: 100%;
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+    }
+  }
+
+  // .section-about__label
+  &__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    padding: 20px 60px;
+
+    background: $font-color-title;
+
+    @include screen-490 {
+      padding: 12px 40px;
+    }
+  }
+
+  // .section-about__item
+  &__item {
+    font-family: $font-family-title;
+    color: $font-color-secondary;
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.about-content {
+  // .about-content__text
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

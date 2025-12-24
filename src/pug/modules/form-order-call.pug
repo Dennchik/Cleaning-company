@@ -1,0 +1,32 @@
+form(action="#" id='order-call').order-call.form-order
+  .order-call__body
+    .order-call__btn-close.btn-close
+      +iconfont('plus', '_icon')
+    .order-call__title.t-h2 Заказать звонок
+    .order-call__content 
+      .order-call__row
+        .order-call__column
+          .order-call__line
+            label(for="name-order-call").order-call__lebel
+            .order-call__input
+              input.input.name(id="name-order-call" placeholder="Имя*" autocomplete="off",
+              type="text", name="name", error="Обязательное поле")
+        .order-call__column
+          .order-call__line
+            label(for="phone-order-call").order-call__lebel
+            .order-call__input
+              input.input.phone(type="tel" id='phone-order-call' placeholder="+7 (___) ___-__-__" autocomplete="off" name="phone" error="Обязательное поле" 
+              ) 
+        .order-call__column 
+          .order-call__checkbox
+            .checkbox
+              label.checkbox__label 
+                input(type="checkbox" name="agree" form="order-call").checkbox__input 
+                span.checkbox__checked
+                  +iconfont('check', '_icon')
+            span._text Подтверждаю, что&nbsp;ознакомился&nbsp;(&#8209;лась) с&nbsp;политикой конфиденциальности и&nbsp;даю&nbsp;согласие на&nbsp;обработку персональных 
+      .order-call__row 
+        .order-call__button.button-container
+          button(form="order-call" type="button").send-button.button.t-h2
+            span Отправить
+          .button-blink

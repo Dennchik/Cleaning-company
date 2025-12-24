@@ -1,0 +1,16 @@
+form(id="form-order").order-form 
+	.order-form__body
+		.order-form__line
+			.order-form__item 
+				label(for="name").order-form__label 
+				.order-form__input
+					input.input.name(id="name" autocomplete="on" type="text" value="" name="name" error="Обязательное поле" placeholder="Имя*")
+			.order-form__item 
+				label(for="phone").order-form__label 
+				.order-form__input
+					input.input.phone(id="phone" autocomplete="off" type="tel" name="phone" error="Обязательное поле" placeholder="+7 (___) ___-__-__")
+		.order-form__line
+			.order-form__item 
+				label(for="comment").order-form__label 
+				.order-form__text
+					textarea.order-form__comment(id="comment" autocomplete="on" type="text" value="" name="comment" placeholder="Сообщение...")

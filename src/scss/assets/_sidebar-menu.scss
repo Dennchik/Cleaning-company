@@ -1,0 +1,166 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+//* ----------------------------------------------------------------------------
+.sidebar-menu {
+  pointer-events: all;
+
+  position: fixed;
+  z-index: 13;
+  top: 80px;
+  right: 0;
+  transform: translateX(100%);
+
+  width: 100%;
+  min-width: 288px;
+  max-width: 320px;
+  height: calc(100vh - 80px);
+
+  transition: transform 0.3s ease-in-out;
+
+  .header__text {
+    max-width: 100%;
+  }
+
+  &._open-menu {
+    transform: translateX(0);
+  }
+
+  @include min-960 {
+    display: none;
+  }
+
+  .header__text {
+    color: #fff;
+  }
+
+  // .sidebar-menu__body
+  &__body {
+    height: 100%;
+    background-color: $color;
+  }
+
+  // .sidebar-menu__content
+  &__content {
+    transform-origin: 200% 100%;
+
+    max-width: 400px;
+    height: 100%;
+    border: 1px solid rgb(128 128 128 / 32.2%);
+    border-top: none;
+    border-bottom: none;
+
+    box-shadow: -2px 0 7px #2b2b2b;
+  }
+
+  // .sidebar-menu__menu
+  &__menu {
+    position: relative;
+    transform-origin: 0 50%;
+    transform: translate3d(0, 0, 0);
+
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    border-radius: 3px;
+
+    text-shadow: none;
+
+    background-clip: padding-box;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 60%);
+
+    .header__menu-items {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: start;
+      justify-content: flex-start;
+
+      color: #fff;
+    }
+
+    .header__sub-item {
+      padding: 5px 20px;
+    }
+  }
+
+  // .sidebar-menu__menu-header
+  &__menu-header {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+
+    padding: 20px 10px;
+    border-bottom: 1px solid $border-color;
+
+    line-height: 1;
+  }
+
+  // .sidebar-menu__menu-content
+  &__menu-content {
+    align-self: start;
+
+    width: 100%;
+    height: 100%;
+    padding: 16px 18px 16px 16px;
+
+    font-size: 2.4rem;
+    color: #222;
+  }
+
+  // .sidebar-menu__menu-footer
+  &__menu-footer {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid $border-color;
+  }
+  .network__network-links {
+    justify-content: space-evenly;
+  }
+}
+
+.network {
+  // .network__network-links
+  &__network-links {
+    display: flex;
+    align-items: center;
+  }
+
+  // .network__icon-link
+  &__icon-link {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  ._icon {
+    &::before {
+      font-size: 3.8rem;
+      font-weight: 700;
+    }
+  }
+
+  .icon-telegram-fly {
+    &::before {
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: #048cca;
+    }
+  }
+
+  .icon-vk-brand {
+    &::before {
+      font-size: 4.5rem;
+      color: #fff;
+      opacity: 0.7;
+    }
+  }
+
+  .icon-whatsapp {
+    &::before {
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: green;
+    }
+  }
+}

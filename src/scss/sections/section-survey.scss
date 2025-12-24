@@ -1,0 +1,139 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-survey {
+  // .section-survey__body
+  &__body {
+    padding: 6rem 0;
+
+    @include screen-490 {
+      padding: 16px 0;
+    }
+  }
+
+  // .section-survey__content
+  &__content {
+    display: flex;
+    gap: 6rem;
+  }
+
+  // .section-survey__title
+  &__title {
+    margin-bottom: 2rem;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: $font-color-title;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .section-survey__column
+  &__column {
+    position: relative;
+    padding: 6rem;
+  }
+
+  // .section-survey__image
+  &__image {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+
+    img {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  // .section-survey__list
+  &__list {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3.4rem;
+    padding: 6rem;
+  }
+
+  // .section-survey__item
+  &__item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .section-survey__button
+  &__button {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    .button-request {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      max-width: 300px;
+
+      color: $font-color-secondary;
+
+      background: $font-color-title;
+      .button {
+        padding: 0 3rem;
+        box-shadow: 0 0 10px #000;
+      }
+    }
+    span {
+      line-height: 150%;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+}
+
+.item-list {
+  // .item-list__number
+  &__number {
+    border-radius: 50%;
+    color: $background;
+    background: $color;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 6rem;
+      height: 6rem;
+
+      @include screen-375 {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  // .item-list__title
+
+  &__title {
+    font-family: $font-family-title;
+    line-height: 100%;
+    color: $font-color-title;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .item-list__text
+  &__text {
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+}

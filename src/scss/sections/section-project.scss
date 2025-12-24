@@ -1,0 +1,52 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-project {
+  // .section-project__body
+  &__body {
+    padding: 6rem 0;
+
+    @include screen-490 {
+      padding: 16px 0;
+    }
+  }
+
+  // .section-project__title
+  &__title {
+    margin-bottom: 2rem;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: $font-color-title;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+}
+
+.project-images {
+  // .project-images__content
+  &__content {
+    display: flex;
+    border: 1px solid $font-color-title;
+  }
+
+  // .project-images__column
+  &__column {
+    display: flex;
+    flex: 0 1 25%;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      border-right: 1px solid $font-color-title;
+    }
+  }
+
+  // .project-images__image
+  &__image {
+    padding: 4px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $font-color-title;
+    }
+  }
+}

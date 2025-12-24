@@ -1,0 +1,182 @@
+form(action="#" id="form-question").form-question.form-order
+  .form-question__body.radio-group
+    .form-question__btn-close.btn-close
+      +iconfont('plus', '_icon') 
+    .form-question__content
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Какой тип вашей коммерческой недвижимости требует управления?
+        .form-question__row 
+          .form-question__line-radio
+            input(type="radio" id="office-1" name="building-type" value="Офисное здание").form-question__input
+            label(for="office-1").form-question__label Офисное здание
+          .form-question__line-radio
+            input(type="radio" id="office-2" name="building-type" value="Торговый центр").form-question__input
+            label(for="office-2").form-question__label Торговый центр
+          .form-question__line-radio
+            input(type="radio" id="office-3" name="building-type" value="Складское помещение").form-question__input
+            label(for="office-3").form-question__label Складское помещение
+          .form-question__line-radio
+            input(type="radio" id="office-4" name="building-type" value="Здание смешанного использования").form-question__input
+            label(for="office-4").form-question__label Здание смешанного использования 
+          .form-question__line-radio
+            input(type="radio" id="office-5" name="building-type" value="Другое").form-question__input
+            label(for="office-5").form-question__label Другое 
+          .form-question__textarea
+            span.form-question__text
+              textarea.form-question__comment(id="comment-1" autocomplete="on" type="text" value="" name="comment-1" placeholder="Напишите свой вариант...")
+        .form-question__buttons
+          .form-question__button._btn-next 
+            button(type="button").button.t-h2 
+              span Далее 
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Насколько вы&nbsp;заинтересованы в&nbsp;использовании наших услуг по&nbsp;управлению недвижимостью?
+        .form-question__row 
+          .form-question__line-radio
+            input(type="radio" id="int-1" name="interest" value="Очень заинтересован").form-question__input
+            label(for="int-1").form-question__label Очень заинтересован
+          .form-question__line-radio
+            input(type="radio" id="int-2" name="interest" value="Средне заинтересован").form-question__input
+            label(for="int-2")._label Средне заинтересован
+          .form-question__line-radio
+            input(type="radio" id="int-3" name="interest" value="Не заинтересован, но рассматриваю варианты").form-question__input
+            label(for="int-3").form-question__label Не заинтересован, но&nbsp;рассматриваю варианты
+          .form-question__line-radio
+            input(type="radio" id="int-4" name="interest" value="Совсем не заинтересован").form-question__input
+            label(for="int-4").form-question__label Совсем не заинтересован 
+        .form-question__buttons
+          .form-question__button._btn-prev
+            button(type="button").button.t-h2
+              span Назад
+          .form-question__button._btn-next
+            button(type="button").button.t-h2
+              span Далее
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Каковы ваши основные цели передачи недвижимости в&nbsp;управление?
+        .form-question__row 
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-1" name="tasks-1" value="Повышение доходности").form-question__input
+            label(for="tasks-1").form-question__label Повышение доходности
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-2" name="tasks-2" value="Снижение операционных издержек").form-question__input
+            label(for="tasks-2").form-question__label Снижение операционных издержек
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-3" name="tasks-3" value="Увеличение стоимости объекта").form-question__input
+            label(for="tasks-3")._label Увеличение стоимости объекта
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-4" name="tasks-4" value="Освобождение времени для других дел").form-question__input
+            label(for="tasks-4").form-question__label Освобождение времени для&nbsp;других&nbsp;дел
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-5" name="tasks-5" value="Обеспечение качественного обслуживания арендаторов").form-question__input
+            label(for="tasks-5").form-question__label Обеспечение качественного обслуживания арендаторов
+              +iconfont('check', '_icon') 
+          .form-question__line-checked 
+            input(type="checkbox" id="tasks-6" name="tasks-6" value="Другое")._input
+            label(for="tasks-6").form-question__label
+              | Другое
+              +iconfont('check', '_icon') 
+          .form-question__line
+            .form-question__textarea
+              span.form-question__text
+                textarea.form-question__comment(id="comment-2" autocomplete="on" type="text" name="comment-2" placeholder="Напишите свой вариант...")
+        .form-question__buttons
+          .form-question__button._btn-prev
+            button(type="button").button.t-h2
+              span Назад
+          .form-question__button._btn-next
+            button(type="button").button.t-h2
+              span Далее
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Какой бюджет вы&nbsp;готовы выделить на&nbsp;услуги по&nbsp;управлению вашей недвижимостью?
+        .form-question__row 
+          .form-question__line-radio
+            input(type="radio" id="budget-1" name="budget" value="До 100,000 ₽ в год").form-question__input
+            label(for="budget-1")._label До&nbsp;100,000&nbsp;₽&nbsp;в&nbsp;год
+          .form-question__line-radio
+            input(type="radio" id="budget-2" name="budget" value="От 100,000 до 500,000 ₽ в год").form-question__input
+            label(for="budget-2").form-question__label От&nbsp;100,000&nbsp;до&nbsp;500,000&nbsp;₽&nbsp;в&nbsp;год
+          .form-question__line-radio
+            input(type="radio" id="budget-3" name="budget" value="От500,000до1,000,000₽ вгод").form-question__input
+            label(for="budget-3").form-question__label От&nbsp;500,000&nbsp;до&nbsp;1,000,000&nbsp;₽&nbsp;в&nbsp;год
+          .form-question__line-radio
+            input(type="radio" id="budget-4" name="budget" value="Более 1,000,000 ₽ в год")._form-question_input
+            label(for="budget-4")._label Более&nbsp;1,000,000&nbsp;₽&nbsp;в&nbsp;год 
+        .form-question__buttons
+          .form-question__button._btn-prev
+            button(type="button").button.t-h2
+              span Назад
+          .form-question__button._btn-next
+            button(type="button").button.t-h2
+              span Далее
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Какие дополнительные услуги вас&nbsp;интересуют?
+        .form-question__row 
+          .form-question__line-checked 
+            input(type="checkbox" id="service-1" name="service-1" value="Юридическое сопровождение").form-question__input
+            label(for="service-1").form-question__label Юридическое сопровождение
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="service-2" name="service-2" value="Финансовый аудит").form-question__input
+            label(for="service-2").form-question__label Финансовый аудит
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="service-3" name="service-3" value="PR и&nbsp;маркетинг объекта").form-question__input
+            label(for="service-3").form-question__label PR и&nbsp;маркетинг объекта
+              +iconfont('check', '_icon')
+          .form-question__line-checked 
+            input(type="checkbox" id="service-4" name="service-4" value="Управление ремонтными работами").form-question__input
+            label(for="service-4").form-question__label
+              | Управление ремонтными работами
+              +iconfont('check', '_icon') 
+          .form-question__line-checked 
+            input(type="checkbox" id="service-5" name="service-5" value="Другое")._input
+            label(for="service-5").form-question__label
+              | Другое
+              +iconfont('check', '_icon') 
+          .form-question__textarea
+            span.form-question__text
+              textarea.form-question__comment(id="comment-3" autocomplete="on" type="text" name="comment-3" placeholder="Напишите свой вариант...")
+        .form-question__buttons
+          .form-question__button._btn-prev
+            button(type="button").button.t-h2
+              span Назад
+          .form-question__button._btn-next
+            button(type="button").button.t-h2
+              span Далее
+      fieldset.form-question__fieldset-table
+        legend.form-question__title.t-h3 Готово!
+        p Для предоставления информации менеджером, укажите контактные данные
+        .form-question__row 
+          .form-question__line
+            label(for="name-form-question").form-question__label 
+            .form-question__input
+              input.input.name(id="name-form-question" placeholder="Имя*" autocomplete="off" type="text" name="name" error="Обязательное поле")
+          .form-question__line
+            label(for="phone-form-question").form-question__label 
+            .form-question__input
+              input.input.phone(type="tel" id='phone-form-question' placeholder="+7 (___) ___-__-__" autocomplete="off" name="phone" error="Обязательное поле" 
+              )
+          .form-question__line
+            label(for="mail").form-question__label 
+            .form-question__input
+              input.input(type="tel" class="maile" id='mail' placeholder="e-mail" autocomplete="off" name="mail" error="Обязательное поле" 
+              ) 
+          .form-question__checkbox
+            .checkbox
+              label._label 
+                input(type="checkbox" name="agree-form" form="form-question")._input 
+                span.checkbox__checked
+                  +iconfont('check', '_icon')
+            span Подтверждаю, что&nbsp;ознакомился&nbsp;(&#8209;лась) с&nbsp;политикой конфиденциальности и&nbsp;даю&nbsp;согласие на&nbsp;обработку персональных 
+        .form-question__buttons
+          .form-question__button._btn-prev
+            button(type="button").button.t-h2
+              span Назад
+          .form-question__button.button-container._btn-submit
+            button(type="button").send-button.button.t-h2
+              span Отправить 
+
+

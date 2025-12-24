@@ -1,0 +1,110 @@
+// todo --------------------------- Fonts --------------------------------------
+@use 'core/fonts';
+@use 'core/fonts-import';
+// todo --------------------------- layout -------------------------------------
+@use 'layouts/bem-block';
+@use 'layouts/header';
+@use 'layouts/footer';
+//todo  --------------------------- Icon Fonts ---------------------------------
+@use 'core/_iconfonts.scss';
+//todo  --------------------------- Core ---------------------------------------
+@use 'core/reset' as *;
+@use 'core/variables' as *;
+@use 'core/mixins' as *;
+@use 'core/extend' as *;
+
+// todo --------------------------- Modules ------------------------------------
+// @use 'modules/preloader';
+// todo --------------------------- Assets -------------------------------------
+@use 'assets/burger-button';
+@use 'assets/sidebar-menu';
+// todo --------------------------- Chunks -------------------------------------
+// @use 'chunks/menu-list';
+// todo --------------------------- Plugins ------------------------------------
+@use 'assets/swiper-11.2.5';
+// todo ---------------------------- Pages -------------------------------------
+@use 'pages/page';
+// todo -------------------------- Section -------------------------------------
+
+// #region
+// todo ---------------------------- Style -------------------------------------
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+[class*='_container'] {
+  box-sizing: border-box;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include screen-490 {
+    padding: 0 16px;
+  }
+}
+
+[class*=' _img'] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+  }
+}
+
+[class*='_ibg'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+[class*='icon-'] {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  &:hover {
+    .grad-blink {
+      opacity: 1;
+      animation: rain 1s linear infinite;
+    }
+  }
+}

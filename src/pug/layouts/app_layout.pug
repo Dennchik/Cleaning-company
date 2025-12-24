@@ -1,0 +1,52 @@
+include ../includes/mixins
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge") 
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Краткое описание документа")
+    meta(name="keywords" content="keywords-ключевые слова для поиска")
+    block link 
+      link(rel="icon" type="image/icon" href="/img/icons/logo.jpg")
+      //- link(rel="stylesheet" type="text/css" href="/css/main.min.css")
+    block style
+    block script
+
+
+    block title
+    - var text
+    title #{text}
+
+  body
+    include @/pug/modules/preloader
+    include @/pug/includes/mixins 
+    script(defer type="module" src="/src/js/app.js")
+    script(defer type="module" src="/src/js/main.js")
+    .wrapper
+      .page 
+        block header 
+          header.page__header
+            include @/pug/layouts/header
+        block page-content
+          main.page__main-content
+            .main-content#wrapper 
+              .main-content__content#content
+                block main-content 
+                footer.main-content__footer
+                  block footer 
+                    include footer 
+          .page__form-request.request-form
+            block form-request
+              include @/pug/modules/form-request
+          .page__order-call.order-call-form
+            block order-call
+              include @/pug/modules/form-order-call
+          .page__form-questions.questions-form
+            block form-question-sheet
+              include @/pug/modules/form-question-sheet
+          nav.page__aside-menu
+            block burger-menu
+              include @/pug/assets/sidebar-menu 
+        block cookies
+          include @/pug/modules/cookies-accept 

@@ -1,0 +1,189 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.scroll-container {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #00ffea34;
+}
+.page {
+  // .page__form-request
+  &__form-questions,
+  &__form-request,
+  &__order-call {
+    pointer-events: none;
+
+    position: fixed;
+    z-index: 17;
+    top: 0;
+
+    overflow-x: hidden;
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0;
+    background-color: #24344496;
+    backdrop-filter: blur(40px);
+
+    transition: opacity 0.3s ease-in-out;
+
+    &.is-open {
+      opacity: 1;
+      .form-question,
+      .form-request,
+      .order-call {
+        pointer-events: auto;
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  // .page__menu-list
+  &__menu-list {
+    pointer-events: none;
+
+    position: fixed;
+    z-index: 18;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  // .page__header
+  &__header {
+    position: fixed;
+    z-index: 17;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: #243444;
+  }
+
+  // .page__main-content
+  &__main-content {
+    position: relative;
+    z-index: 8;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    line-height: 125%; /* 15/12 */
+  }
+}
+
+._bg-color {
+  margin: 6rem 0;
+  background: $font-color-title;
+
+  @include screen-490 {
+    margin: 16px 0;
+  }
+}
+
+.main-content {
+  // .main-content__section
+  &__section {
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__footer {
+    background: #243444;
+  }
+}
+
+//* - [ @keyframes Animations ] -
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+// @keyframes blick {
+//   0% {
+//     left: -30px;
+//     margin-left: 0px;
+//   }
+//   30% {
+//     left: 110%;
+//     margin-left: 80px;
+//   }
+//   100% {
+//     left: 110%;
+//     margin-left: 80px;
+//   }
+// }
+
+// @keyframes fadeInBackground {
+//   0% {
+//     background: rgb(28, 21, 63);
+//   }
+
+//   100% {
+//     background: $font-color-title;
+//   }
+// }
+
+// /* Анимация открытия */
+// @keyframes expand-height {
+//   0% {
+//     width: 0;
+//     height: 2px; /* Тонкая полоска */
+//     transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
+//   }
+//   50% {
+//     width: 100%; /* Полоса расширяется по ширине */
+//     height: 2px; /* Пока остаётся тонкой */
+//     transform: translate(-50%, -50%) scaleX(1); /* Расширение по ширине */
+//   }
+//   100% {
+//     width: 100%; /* Полная ширина */
+//     height: 100%; /* Полная высота */
+//     transform: translate(-50%, -50%) scaleX(1); /* Завершение */
+//   }
+// }
+
+// /* Анимация закрытия */
+// @keyframes collapse-width {
+//   0% {
+//     width: 100%; /* Полная ширина */
+//     height: 100%; /* Полная высота */
+//     transform: translate(-50%, -50%) scaleX(1); /* Полное состояние */
+//   }
+//   50% {
+//     width: 100%; /* Полоса остаётся широкой */
+//     height: 2px; /* Высота уменьшается до тонкой линии */
+//     transform: translate(-50%, -50%) scaleX(1); /* Ширина сохраняется */
+//   }
+//   100% {
+//     width: 0; /* Полоса исчезает по ширине */
+//     height: 2px; /* Тонкая полоска */
+//     transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
+//   }
+// }

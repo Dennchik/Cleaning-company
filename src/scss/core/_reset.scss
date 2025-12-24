@@ -1,0 +1,205 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+@use 'extend.scss' as *;
+
+html {
+  counter-reset: heading;
+  scroll-behavior: smooth;
+
+  height: 100%;
+
+  color: var(--font-color-default);
+  letter-spacing: 1.1px;
+  font: {
+    size: 62.5%;
+
+    family: $font-family-default;
+    style: normal;
+    weight: $font-weight-default;
+  }
+
+  @include screen-1024 {
+    font-size: 50%;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+
+  overscroll-behavior: none;
+
+  font: 3rem/3 $font-family-default;
+  line-height: 1;
+
+  background: $background;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @include screen-490 {
+    font: 1.5rem/1.5 $font-family-default;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen {
+    scrollbar-width: thin;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  pointer-events: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  vertical-align: baseline;
+  background-color: transparent;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:visited {
+  text-emphasis-style: none;
+  vertical-align: middle;
+}
+
+h2,
+h3 {
+  font-family: $font-family-title;
+}
+
+input,
+button,
+textarea {
+  border: none;
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+  display: inline-block;
+  background: transparent none;
+  box-shadow: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+a:focus,
+a:active,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+    style: inherit;
+    weight: inherit;
+  }
+}
+
+//  * Изменить стиль выделения текста
+::selection {
+  color: $text-color-selection;
+  text-shadow: 0 1px 0 #000;
+  background-color: $text-selection;
+}
+
+::selection {
+  color: $text-color-selection;
+  text-shadow: 0 1px 0 #000;
+  background-color: $text-selection;
+}
+
+/// * Изменить стиль полосы прокрутки (scrollbar)
+::-webkit-scrollbar {
+  position: fixed;
+  width: 0.8rem;
+  padding: 0.031em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  background-color: var(--thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-hover);
+}

@@ -1,0 +1,38 @@
+form(action="#" id='form-request').form-request.form-order
+	.form-request__body
+		.form-request__btn-close.btn-close
+			+iconfont('plus', '_icon')
+		.form-request__title.t-h2 Оставить заявку
+		.form-request__content 
+			.form-request__row
+				.form-request__column
+					.form-request__line
+						label(for="name-form-request").form-request__lebel
+						.form-request__input
+							input.input.name(id="name-form-request" placeholder="Имя*" autocomplete="off",
+							type="text" name="name" error="Обязательное поле")
+				.form-request__column
+					.form-request__line
+						label(for="phone-form-request").form-request__lebel
+						.form-request__input
+							input.input.phone(type="tel" id='phone-form-request' placeholder="+7 (___) ___-__-__" autocomplete="off" name="phone" error="Обязательное поле" 
+							)
+				.form-request__column
+					._line
+						label(for="e-mail").form-request__lebel
+						.form-request__input
+							input.input(type="tel" class="maile" id='e-mail' placeholder="e-mail" autocomplete="off" name="mail" error="Обязательное поле" 
+							)
+				.form-request__column 
+					.form-request__checkbox
+						.checkbox
+							label.checkbox__label 
+								input(type="checkbox" name="agree" form="form-request").checkbox__input
+								span.checkbox__checked
+									+iconfont('check', '_icon')
+						span.form-request__text Подтверждаю, что&nbsp;ознакомился&nbsp;(&#8209;лась) с&nbsp;политикой конфиденциальности и&nbsp;даю&nbsp;согласие на&nbsp;обработку персональных 
+			.form-request__row 
+				.form-request__button.button-container
+					button(form="form-request" type="button").send-button.button.t-h2
+						span Оставить заявку 
+					.button-blink 

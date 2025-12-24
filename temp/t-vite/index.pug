@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge") 
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="Краткое описание документа")
+		meta(name="keywords" content="keywords-ключевые слова для поиска")
+
+		block title
+		- var text
+		title #{text}
+
+	body
+		//- include ../modules/preloader
+		//- include ../includes/mixins
+		//- #app
+		.wrapper
+			.page 
+				block header 
+					header.page__header
+						//- include ../layouts/header
+				block page-content
+					main.page__main-content
+						.main-content#wrapper
+							.main-content__content#content
+		script(defer type="module" src="/src/main.js")

@@ -1,0 +1,143 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-ordercall {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 6rem 0;
+
+  @include screen-490 {
+    margin: 16px 0;
+  }
+
+  // .section-order__body
+  &__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @include screen-690 {
+      position: relative;
+    }
+  }
+
+  // .section-order__title
+  &__title {
+    margin-bottom: 8px;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: $font-color-secondary;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .section-order__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    @include screen-490 {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  // .section-order__column
+  &__column {
+    display: flex;
+    height: 100%;
+
+    &:nth-child(1) {
+      display: block;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 55px;
+
+      @include screen-490 {
+        padding-top: 0;
+        .section-order__title {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      flex-direction: column;
+      padding: 0 32px;
+      background: rgb(36 52 68 / 50%);
+
+      @include screen-490 {
+        padding: 0 16px;
+        .section-order__title {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // .section-order__box
+  &__box {
+    margin: 155px 0;
+
+    @include minmax-490-1920 {
+      margin: calc(32px + (155 - 32) * ((100vw - 320px) / (1920 - 490))) 0;
+    }
+
+    @include screen-490 {
+      margin: 32px 0;
+    }
+  }
+
+  // .section-order__list
+  &__list {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 6rem;
+
+    @include minmax-490-1920 {
+      margin-bottom: calc(24px + (60 - 24) * ((100vw - 490px) / (1920 - 490)));
+    }
+
+    @include screen-490 {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .section-order__item
+  &__item {
+    line-height: 130%;
+    color: $font-color-secondary;
+    list-style: inside;
+
+    span {
+      margin-left: -10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  // .section-order__button
+  &__button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 300px;
+
+    color: $font-color-title;
+
+    background: $font-color-secondary;
+  }
+}

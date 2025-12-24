@@ -1,0 +1,33 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.burger-button {
+  cursor: pointer;
+  transition: opacity 0.5s ease-in;
+
+  // .burger-button__line
+  &__line {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+    margin: 6px auto;
+
+    background-color: $color-secondary;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.is-active {
+    .burger-button__line {
+      background-color: $color-secondary;
+      &:nth-child(1) {
+        transform: translateY(8px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-8px);
+      }
+    }
+  }
+}

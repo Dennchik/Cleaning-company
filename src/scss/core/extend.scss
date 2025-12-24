@@ -1,0 +1,299 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+
+//* ----------------------------------------------------------------------------
+
+.box-shadow {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 5px #000;
+}
+
+//* ----------------------------------------------------------------------------
+
+.gradient-border-bottom {
+  background-image: linear-gradient(
+    to left top,
+    rgb(205 215 238 / 61%) 25%,
+    transparent 75%
+  );
+}
+
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.gradient-loader {
+  background-image:
+    radial-gradient(
+      ellipse at bottom center,
+      rgb(36 52 68 / 37%) 30%,
+      transparent
+    ),
+    radial-gradient(
+      ellipse at 10% 0,
+      rgb(23 27 28 / 87.7%) 25%,
+      rgb(238 238 238 / 0%) 70%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse at 110% 100%,
+      rgb(23 27 28 / 73.3%) 25%,
+      rgb(238 238 238 / 0%) 70%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 0 100%,
+      $color 0,
+      rgb(36 52 68 / 37%) 30%,
+      transparent
+    ),
+    radial-gradient(circle at 100% 0, $color, $color 30%, transparent),
+    radial-gradient(ellipse at 30% 2%, #171b1c 0, $color 100%, transparent);
+}
+
+.effect-blick {
+  pointer-events: none;
+
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+
+  background: transparent;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    transform: translateY(-50%) rotate(45deg);
+
+    width: 50px;
+    height: 800px;
+
+    opacity: 0.4;
+    background: linear-gradient(90deg, transparent, #2434449f, transparent);
+
+    transition: all 0.1s;
+    animation: blick 3s infinite linear;
+  }
+}
+
+.link_split {
+  position: relative;
+
+  display: inline-block;
+
+  line-height: 1;
+  white-space: nowrap;
+
+  outline: 0;
+
+  transition: color 0s 0.3s;
+
+  &::before,
+  &::after {
+    content: attr(data-letters);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+
+    transition:
+      color 0.3s,
+      opacity 0.3s,
+      transform 0.5s;
+  }
+
+  &::before {
+    clip-path: polygon(0 0, 100% 0%, 100% 30%, 0 65%);
+  }
+
+  &::after {
+    clip-path: polygon(0 65%, 100% 30%, 100% 100%, 0 100%);
+  }
+
+  &:hover {
+    color: transparent;
+    text-shadow: none;
+    transition: none;
+
+    &::before {
+      transform: translate3d(0, -2px, 0);
+    }
+
+    &::after {
+      transform: translate3d(0, 2px, 0);
+    }
+
+    &::before,
+    &::after {
+      transition:
+        color 0.3s,
+        transform 0.3s;
+    }
+  }
+}
+
+.link_underline-center {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+
+    width: 100%;
+    height: 1px;
+
+    opacity: 0.6;
+    background-color: $font-color-secondary;
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+
+    a {
+      opacity: 1;
+    }
+  }
+}
+
+.link_underline {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+
+    width: 0;
+    height: 1px;
+
+    opacity: 0.6;
+    background-color: $font-color-secondary;
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    right: 0;
+    bottom: 0;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      transform: scaleX(1);
+      width: 47%;
+    }
+
+    a {
+      opacity: 1;
+    }
+  }
+}
+.link_underline-lr {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+    // opacity: 0.6;
+    background: linear-gradient(to right, #ffffffb0, #5e4da8);
+
+    transition: width 0.3s ease-in-out;
+  }
+
+  &::before {
+    bottom: 0;
+    left: 0;
+  }
+  span {
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.grad-blink {
+  position: absolute;
+  top: -50%;
+  inset: 0;
+
+  opacity: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(0 119 255 / 43.8%) 50%,
+    rgb(255 255 255 / 0%) 100%
+  );
+
+  transition: 0.3s;
+}
+//* ------------------------------- Gradient -----------------------------------
+.grad_underline {
+  /* Размер фона для каждого слоя */
+  background-image:
+    linear-gradient(to left, transparent, transparent),
+    linear-gradient(
+      to left,
+      var(--background-selected),
+      var(--font-color-active)
+    );
+
+  /* Позиционирование фона */
+  background-repeat: no-repeat;
+
+  /* Повторение фона */
+  background-position:
+    100% 100%,
+    /* Первое изображение */ 0 100%; /* Второе изображение */
+
+  /* Переход для изменения размера фона */
+  background-size:
+    100% 1px,
+    /* Первое изображение */ 0 1px; /* Второе изображение */
+
+  /* Определяем фоновые изображения */
+  transition: background-size 400ms;
+}
