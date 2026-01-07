@@ -6,18 +6,20 @@ prepend script
 block title
 	- var text='Home'
 
-block main-content 
+block main-content
 	section.main-content__section#home
 		include @/pug/sections/section-perform
-	section.main-content__section#about 
+	section.main-content__section#about
 		include @/pug/sections/section-about
+	section.main-content__section#credence 
+		include @/pug/sections/section-credence 
 	section.main-content__section#services
 		include @/pug/sections/section-services
 	section.main-content__section
 		include @/pug/sections/section-prices
 	section.main-content__section.its-block._bg-color#order
 		include @/pug/sections/section-order
-	section.main-content__section 
+	section.main-content__section
 		include @/pug/sections/section-partners
 	section.main-content__section.its-block
 		include @/pug/sections/section-ordercall 
@@ -25,7 +27,7 @@ block main-content
 		include @/pug/sections/section-info
 	section.main-content__section.its-block._bg-color
 		include @/pug/sections/section-consultation
-	section.main-content__section  
+	section.main-content__section 
 		include @/pug/sections/section-survey
 	section.main-content__section 
 		include @/pug/sections/section-brands 

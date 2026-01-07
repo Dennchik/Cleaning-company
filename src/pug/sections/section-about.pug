@@ -1,12 +1,38 @@
 .section-about
 	.section-about__body._container
-		h2.section-about__title.t-h1.el-item О&nbsp;компании
-		.section-about__content 
-			.about-content.section-about__column 
-				.about-content__text.t-text
-					p.its-el Главное направление работы нашей ООО"Центр&nbsp;развития&nbsp;инвестиций"&nbsp;— профессиональное управление недвижимостью по&nbsp;схеме доверительного сотрудничества, при&nbsp;котором все&nbsp;функции делегируются сотрудником, но&nbsp;принятие основных стратегических решений и&nbsp;единый контроль объекта остаётся в&nbsp;руках собственника.
-					p.its-el Офисные, торговые, производственные и&nbsp;складские площади, оснащённые всеми необходимыми коммуникациями и&nbsp;обладающие развитой инфраструктурой.
-					p.its-el Сотрудничество с&nbsp;нами освобождает собственнику массу времени и&nbsp;избавляет от&nbsp;многочисленных хлопот. Мы&nbsp;помогаем оптимизировать расходы, повысить доходность объекта и&nbsp;продумать его&nbsp;долгосрочное развитие. При&nbsp;этом владелец недвижимости продолжает принимать важные стратегические решения и&nbsp;осуществляет общий контроль. 
-			.section-about__column 
-				.section-about__image._img 
-					+picture('/img/pic/map.png', 'image') 
+		h2.section-about__title.t-h1.el-item ООО «Центр развития инвестиций» — надёжный клининг-партнёр с&nbsp;2022&nbsp;года
+		.section-about__content
+			.section-about__column.about-content 
+				.about-content__text.t-text 
+					p.its-el Мы специализируемся исключительно на непрерывной уборке нежилых помещений: офисов, производств, складов, торговых и логистических комплексов.
+
+					p.its-el Более 3 лет успешной работы:- Заключено более 40 договоров с юридическими лицами и ИП- Собственная материально-техническая база, готовая к старту в течение 24 часов
+			.section-about__column.about-content 
+				.section-about__item
+					.about-content__image 
+						svg(width="150" height="180" viewBox="77 22 100 160" xmlns="http://www.w3.org/2000/svg")
+							defs
+								linearGradient#accent(x1="0" y1="0" x2="1" y2="1")
+									stop(offset="0%" stop-color="#4f8cff")
+									stop(offset="100%" stop-color="#6fd3c3")
+
+							// Shield (центр)
+							path(d="M80 50 C80 35 160 35 160 50 V120 C160 160 120 180 120 180 C120 180 80 160 80 120 Z" fill="url(#accent)")
+
+							// Check
+							path( d="M100 115 L115 130 L145 95" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+							)
+
+							// Sparkles
+							circle(cx="175" cy="70" r="4" fill="#6fd3c3")
+							circle(cx="185" cy="100" r="3" fill="#4f8cff")
+							circle(cx="165" cy="110" r="2.5" fill="#6fd3c3")
+					.about-content__content
+						.about-content__text.t-text 
+							p Мы — не подрядчики на один раз. 
+							p Мы — ваша служба поддержки чистоты. 
+						.about-content__address 
+							p ИНН: 4025455198 
+							p Адрес: 249038, Калужская область, г. Обнинск, пр-кт Ленина, д. 121, офис № 311
+	//- .section-about__image._img 
+		+picture('/img/pic/map.png', 'image') 

@@ -3,6 +3,9 @@
 $icomoon-font-family: 'icon-set' !default;
 $icomoon-font-path: 'fonts' !default;
 
+$icon-phone-outbound: string.unquote('"\\e910"');
+$icon-youtube-lg: string.unquote('"\\ea9d"');
+$icon-phone-call: string.unquote('"\\e919"');
 $icon-sign-out: string.unquote('"\\e916"');
 $icon-hand-shake: string.unquote('"\\f2b6"');
 $icon-financial-system: string.unquote('"\\e905"');
@@ -21,5 +24,4 @@ $icon-minus: string.unquote('"\\e908"');
 $icon-plus: string.unquote('"\\e911"');
 $icon-published-changes: string.unquote('"\\e907"');
 $icon-check: string.unquote('"\\e90f"');
-$icon-youtube-lg: string.unquote('"\\ea9d"');
 $icon-dzen: string.unquote('"\\e93b"');

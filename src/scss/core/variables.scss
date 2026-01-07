@@ -16,7 +16,7 @@ $font-weight-default: 400;
 $font-size: 1.6rem;
 //* - [Font color] -
 
-$font-color-title: rgb(36 52 68);
+$font-color-title: hsl(220deg 35% 35%);
 $font-color-secondary: rgb(250 250 255);
 //* - [Background Color] -
 $background: rgb(255 255 255);
@@ -34,6 +34,7 @@ $color-title: rgb(143 242 255);
 $text-selection: rgb(0 84 99 / 24.7%);
 $text-color-selection: rgb(155 153 153);
 //* -
+$border-button-color: rgb(131 169 224);
 
 :root {
   // --astorRender: url('../img/pictures/i.png');

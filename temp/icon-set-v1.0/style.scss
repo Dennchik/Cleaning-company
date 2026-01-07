@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3elod9');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wcjc59');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3elod9#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wcjc59#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3elod9')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wcjc59')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3elod9')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wcjc59')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3elod9##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wcjc59##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -23,11 +23,14 @@
 
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
+  font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
   font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga';
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
   font-variant-ligatures: discretionary-ligatures;
 
   /* Better Font Rendering =========== */
@@ -40,6 +43,21 @@
   letter-spacing: 0;
 }
 
+.icon-phone-outbound {
+  &::before {
+    content: $icon-phone-outbound;
+  }
+}
+.icon-youtube-lg {
+  &::before {
+    content: $icon-youtube-lg;
+  }
+}
+.icon-phone-call {
+  &::before {
+    content: $icon-phone-call;
+  }
+}
 .icon-sign-out {
   &::before {
     content: $icon-sign-out;
@@ -128,11 +146,6 @@
 .icon-check {
   &::before {
     content: $icon-check;
-  }
-}
-.icon-youtube-lg {
-  &::before {
-    content: $icon-youtube-lg;
   }
 }
 .icon-dzen {

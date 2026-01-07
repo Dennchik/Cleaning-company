@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-set';
-  src:  url('fonts/icon-set.eot?3elod9');
-  src:  url('fonts/icon-set.eot?3elod9#iefix') format('embedded-opentype'),
-    url('fonts/icon-set.ttf?3elod9') format('truetype'),
-    url('fonts/icon-set.woff?3elod9') format('woff'),
-    url('fonts/icon-set.svg?3elod9#icon-set') format('svg');
+  src:  url('fonts/icon-set.eot?wcjc59');
+  src:  url('fonts/icon-set.eot?wcjc59#iefix') format('embedded-opentype'),
+    url('fonts/icon-set.ttf?wcjc59') format('truetype'),
+    url('fonts/icon-set.woff?wcjc59') format('woff'),
+    url('fonts/icon-set.svg?wcjc59#icon-set') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,6 +35,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-phone-outbound:before {
+  content: "\e910";
+}
+.icon-youtube-lg:before {
+  content: "\ea9d";
+}
+.icon-phone-call:before {
+  content: "\e919";
+}
 .icon-sign-out:before {
   content: "\e916";
 }
@@ -88,9 +97,6 @@
 }
 .icon-check:before {
   content: "\e90f";
-}
-.icon-youtube-lg:before {
-  content: "\ea9d";
 }
 .icon-dzen:before {
   content: "\e93b";

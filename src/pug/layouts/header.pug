@@ -4,19 +4,69 @@
 		.header__content
 			.header__column.el-logo
 				.header__logo-wrapper 
-					a(href="#home" aria-label="home" ).header__logo.anchor-link
-						+picture('/img/logo.jpg', 'image') 
+					a(href="#home" aria-label="home" ).header__logo.anchor-link 
+						.header__logo-container
+							svg.logo(viewBox="0 0 400 400")
+								//  Прозрачный фон 
+								rect(width="400" height="400" fill="none")
+								//  Основной элемент - абстрактная чистота 
+								g(transform="translate(90, 40)")
+									//  Центральный круг - чистота и завершенность 
+									circle(cx="100" cy="100" r="80" fill="#6ba5fc" opacity="0.9")
+									//  Брызги вокруг - эффект чистоты 
+									path(d="M100,20 Q110,5 120,20 Q130,10 140,25 Q150,15 160,30 Q155,40 165,35 Q175,45 170,55 Q180,60 175,70 Q185,75 180,85 Q190,90 185,100 Q195,105 190,115 Q200,120 195,130 Q205,135 200,145 Q210,150 205,160 Q215,165 210,175 Q220,180 215,190 Q225,195 220,205" fill="none" stroke="#4a90e2" stroke-width="8" stroke-linecap="round" opacity="0.7")
+									//  Символ здания (производство) 
+									rect(x="80" y="80" width="40" height="60" fill="white" rx="3")
+									rect(x="85" y="85" width="10" height="10" fill="#6ba5fc")
+									rect(x="105" y="85" width="10" height="10" fill="#6ba5fc")
+									rect(x="85" y="105" width="10" height="10" fill="#6ba5fc")
+									rect(x="105" y="105" width="10" height="10" fill="#6ba5fc")
+									//  Верх здания 
+									polygon(points="80,80 120,80 130,70 70,70" fill="#1e3a6f")
+									//  Капля воды (клининг) 
+									path(d="M60,160 Q50,140 60,120 Q70,100 90,110 Q100,130 90,150 Q80,160 60,160" fill="#4a90e2" opacity="0.8")
+									//  Внутренний блик капли 
+									ellipse(cx="75" cy="135" rx="8" ry="5" fill="white" opacity="0.6")
+									//  Волны чистоты 
+									path(d="M130,160 Q140,155 150,160 Q160,165 170,160 Q180,155 190,160" fill="none" stroke="white" stroke-width="3" stroke-linecap="round")
+									//  Зубчатое колесо (производство) 
+									circle(cx="160" cy="160" r="25" fill="#6ba5fc" opacity="0.9")
+									circle(cx="160" cy="160" r="15" fill="#6ba5fc")
+									//  Зубцы колеса 
+									g(fill="#4a90e2")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(0 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(45 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(90 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(135 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(180 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(225 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(270 160 160)")
+										rect(x="160" y="135" width="5" height="15" transform="rotate(315 160 160)")
+									//  Щетка для уборки 
+									rect(x="140" y="50" width="30" height="15" fill="#6ba5fc" rx="2")
+									rect(x="145" y="65" width="20" height="40" fill="#2c5aa0")
+									rect(x="150" y="105" width="10" height="30" fill="#1e3a6f")
+									//  Линии от щетки - эффект чистоты 
+									path(d="M150,135 L130,155 M155,135 L140,160 M160,135 L150,165" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.8")
+								//  Название компании 
+								g(transform="translate(0, 300)")
+									text(x="200" y="-10" text-anchor="middle" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#a6c9ff").
+										ПРОМЫШЛЕННЫЙ КЛИНИНГ
+									text(x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#a6c9ff").
+										Коммерческие и производственные
+									text(x="200" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#a6c9ff").
+										помещения
 					.header__text(data-da="bp-6" data-da-position="0" data-da-resolution="960") 
-						span Управление коммерческой недвижимостью
+						span Клининг коммерческих и&nbsp;производственных помещений
 			.header__column 
 				.header__menu(data-da="bp-7" data-da-position="0" data-da-resolution="960") 
 					ul.header__menu-items
 						li.header__item
 							a(href="#about").header__link-key.anchor-link.link_underline-lr 
-								span Компания 
+								span О Компания 
 						li.header__item
 							.header__link-key.link_underline-lr
-								span управление
+								span Услуги
 								ul.header__sub-item 
 									li.header__sub-link
 										a(href="#prices").anchor-link.link_underline-lr 
@@ -44,7 +94,7 @@
 											span доверительное управление
 						li.header__item
 							.header__link-key.link_underline-lr
-								span консалтинг
+								span Как работаем
 								ul.header__sub-item 
 									li.header__sub-link
 										a(href="#prices").anchor-link.link_underline-lr 
@@ -57,7 +107,7 @@
 											span юридическое сопровождение 
 						li.header__item
 							.header__link-key.link_underline-lr
-								span партнерство
+								span Примеры работ
 								ul.header__sub-item 
 									li.header__sub-link
 										a(href="#prices").anchor-link.link_underline-lr 
@@ -72,24 +122,19 @@
 										a(href="#client").anchor-link.link_underline-lr 
 											span управляющим компаниями 
 						li.header__item
-							a(href="#contacts")._link-key.anchor-link.link_underline-lr
-								span Контакты
+							a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
+								span Оставить заявку 
 			.header__column
 				.header__phone 
 					.header__phone-item._log-in  
 						//- +iconfont('sign-out', '_icon')
 					.header__phone-item
 						a(href="tel:8 (800) 234-55-44") 
-							span 8&nbsp;(800)&nbsp;234&#8209;55&#8209;44
+							span 8 (800) 234-55-44
 					.header__phone-item
 						a(href="tel:8 (980) 510-41-96") 
-							span 8&nbsp;(953)&nbsp;323&#8209;00&#8209;00
-					.header__phone-item
-						em ежедневно с&nbsp;9.00&#8209;20.00
-
-	//- a.el-community__contact(href="mailto:awdes@yandex.ru?subject=🤝%20Информация%20о%20проекте.%20Давайте%20поговорим.")
-		+iconfont('contacts', '_icon')
-		.el-community__content
-			span.el-community__title Скажи привет! 
+							span +7 (980) 510-41-96
+					//- .header__phone-item
+						em ежедневно с&nbsp;9.00&#8209;20.00 
 	.header__burger-button
 		include ../assets/burger-button

@@ -4,14 +4,21 @@
 .section-perform {
   // .section-perform__image
   &__image {
-    z-index: 1;
+    position: relative;
+    z-index: 2;
     overflow: hidden;
+
+    img {
+      position: relative;
+      z-index: 2;
+      opacity: 0.04;
+    }
   }
 
   // .section-perform__image-fon
   &__image-fon {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -19,6 +26,11 @@
     height: 100%;
 
     background: rgb(36 52 68 / 70%);
+    background-color: hsl(0deg 0% 0% / 100%);
+    background-image:
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 88% 0%, hsl(220deg 86% 63% / 32%) 0, transparent 50%),
+      radial-gradient(at 13% 100%, hsl(220deg 86% 63% / 32%) 0, transparent 50%);
   }
 
   // .section-perform__body
@@ -43,13 +55,16 @@
     height: 100%;
     min-height: 100vh;
     padding-top: 10rem;
+
+    color: #a6c9ff;
+
     .tl-1,
     .tl-2 {
-      transform: translateX(15rem);
+      // transform: translateX(15rem);
       opacity: 0;
     }
     .tl-3 {
-      transform: translateX(40rem);
+      // transform: translateX(40rem);
       opacity: 0;
     }
 
@@ -69,7 +84,6 @@
 
     font-family: $font-family-title;
     line-height: 110%;
-    color: $font-color-secondary;
     text-transform: uppercase;
     letter-spacing: 1.4px;
   }
@@ -82,7 +96,6 @@
     margin-bottom: 3.6rem;
 
     line-height: 130%;
-    color: $font-color-secondary;
     letter-spacing: 0;
 
     @include screen-490 {
@@ -101,18 +114,28 @@
 
     max-width: 300px;
 
-    color: $font-color-title;
-
-    background: $font-color-secondary;
-
     @include screen-490 {
       max-width: 100%;
     }
 
+    .button {
+      transform: skew(-15deg) translateX(2rem);
+      height: auto;
+      padding: 0.8rem 2rem !important;
+      border: 1px solid rgb(131 169 224);
+    }
+
     span {
-      line-height: 150%;
+      transform: skew(15deg);
+
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 100%;
+      color: $font-color-title;
       text-transform: uppercase;
-      white-space: nowrap;
+      white-space: wrap !important;
+
+      filter: contrast(100%);
     }
   }
 }

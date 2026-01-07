@@ -14,6 +14,7 @@
 
   background: #00ffea34;
 }
+
 .page {
   // .page__form-request
   &__form-questions,
@@ -49,6 +50,36 @@
     }
   }
 
+  // page__button-outbound
+  &__button-outbound {
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 0;
+    transform: skew(-15deg) translateX(-2rem);
+
+    padding: 0.8rem 2rem;
+    border: 1px solid rgb(131 169 224);
+
+    line-height: 100%;
+
+    background-color: hsl(0deg 0% 0% / 100%);
+    background-image:
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 39%) 0, transparent 50%),
+      radial-gradient(
+        at 100% 100%,
+        hsl(220deg 86% 63% / 29%) 0,
+        transparent 50%
+      );
+
+    span {
+      transform: skew(15deg);
+      font-size: 22px;
+      color: $border-button-color;
+    }
+  }
+
   // .page__menu-list
   &__menu-list {
     pointer-events: none;
@@ -73,7 +104,21 @@
 
     width: 100%;
 
-    background: #243444;
+    // background-color: hsl(0deg 2% 4% / 100%);
+    // background-image:
+    //   radial-gradient(at 51% 29%, hsl(20deg 0% 0% / 100%) 0, transparent 50%),
+    //   radial-gradient(at 51% 0%, hsl(212deg 2% 2% / 95%) 0, transparent 50%),
+    //   radial-gradient(at 66% 23%, hsl(214deg 82% 62% / 38%) 0, transparent 50%),
+    //   radial-gradient(at 0% 100%, hsl(214deg 82% 62% / 38%) 0, transparent 50%);
+    background-color: hsl(0deg 0% 0% / 100%);
+    background-image:
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 49%) 0, transparent 50%),
+      radial-gradient(
+        at 100% 100%,
+        hsl(220deg 86% 63% / 29%) 0,
+        transparent 50%
+      );
   }
 
   // .page__main-content
@@ -125,65 +170,3 @@
     transform: translateY(100%);
   }
 }
-// @keyframes blick {
-//   0% {
-//     left: -30px;
-//     margin-left: 0px;
-//   }
-//   30% {
-//     left: 110%;
-//     margin-left: 80px;
-//   }
-//   100% {
-//     left: 110%;
-//     margin-left: 80px;
-//   }
-// }
-
-// @keyframes fadeInBackground {
-//   0% {
-//     background: rgb(28, 21, 63);
-//   }
-
-//   100% {
-//     background: $font-color-title;
-//   }
-// }
-
-// /* Анимация открытия */
-// @keyframes expand-height {
-//   0% {
-//     width: 0;
-//     height: 2px; /* Тонкая полоска */
-//     transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
-//   }
-//   50% {
-//     width: 100%; /* Полоса расширяется по ширине */
-//     height: 2px; /* Пока остаётся тонкой */
-//     transform: translate(-50%, -50%) scaleX(1); /* Расширение по ширине */
-//   }
-//   100% {
-//     width: 100%; /* Полная ширина */
-//     height: 100%; /* Полная высота */
-//     transform: translate(-50%, -50%) scaleX(1); /* Завершение */
-//   }
-// }
-
-// /* Анимация закрытия */
-// @keyframes collapse-width {
-//   0% {
-//     width: 100%; /* Полная ширина */
-//     height: 100%; /* Полная высота */
-//     transform: translate(-50%, -50%) scaleX(1); /* Полное состояние */
-//   }
-//   50% {
-//     width: 100%; /* Полоса остаётся широкой */
-//     height: 2px; /* Высота уменьшается до тонкой линии */
-//     transform: translate(-50%, -50%) scaleX(1); /* Ширина сохраняется */
-//   }
-//   100% {
-//     width: 0; /* Полоса исчезает по ширине */
-//     height: 2px; /* Тонкая полоска */
-//     transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
-//   }
-// }

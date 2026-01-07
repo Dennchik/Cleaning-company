@@ -25,6 +25,8 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'youtube': '&#xea9d;',
+            'phone-call': '&#xe919;',
             'sign-out': '&#xe916;',
             'hand-shake': '&#xf2b6;',
             'financial-system': '&#xe905;',
@@ -42,7 +44,6 @@
             'plus': '&#xe911;',
             'published_with_changes': '&#xe907;',
             'check': '&#xe90f;',
-            'youtube': '&#xea9d;',
             'dzen': '&#xe93b;',
           '0': 0
         };

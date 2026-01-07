@@ -36,6 +36,21 @@
   letter-spacing: 0;
 }
 
+.icon-phone-outbound {
+  &::before {
+    content: $icon-phone-outbound;
+  }
+}
+.icon-youtube-lg {
+  &::before {
+    content: $icon-youtube-lg;
+  }
+}
+.icon-phone-call {
+  &::before {
+    content: $icon-phone-call;
+  }
+}
 .icon-sign-out {
   &::before {
     content: $icon-sign-out;
@@ -124,11 +139,6 @@
 .icon-check {
   &::before {
     content: $icon-check;
-  }
-}
-.icon-youtube-lg {
-  &::before {
-    content: $icon-youtube-lg;
   }
 }
 .icon-dzen {

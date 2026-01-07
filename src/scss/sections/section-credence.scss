@@ -1,0 +1,55 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-credence {
+  // .section-credence__body
+  &__body {
+    overflow: hidden;
+    padding-block: 6rem !important;
+
+    @include screen-490 {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  // .section-credence__title
+  &__title {
+    width: 100%;
+    margin-bottom: 12px;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: hsl(220deg 35% 35%);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .section-credence__content
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    .icon {
+      margin-bottom: 1rem;
+      font-size: 4.4rem;
+      color: hsl(220deg 30% 43%);
+    }
+  }
+
+  // .section-credence__column
+  &__column {
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid $border-button-color;
+    border-radius: 10px;
+  }
+}
+
+.credence-content {
+  // .credence-content__text
+  &__text {
+    padding: 1rem 2rem 2rem;
+  }
+}

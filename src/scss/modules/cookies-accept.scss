@@ -10,7 +10,11 @@
 
   width: 100%;
 
-  background-color: $color;
+  background-color: hsl(0deg 0% 0% / 100%);
+  background-image:
+    radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+    radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 39%) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsl(220deg 86% 63% / 29%) 0, transparent 50%);
   box-shadow: 2px 0 7px #000;
 
   &__body {
@@ -40,18 +44,34 @@
     p {
       font-size: 12px;
       line-height: 120%;
-      color: #fff;
+      color: #a6c9ff;
     }
   }
 
-  // .cookies-accept_buttom
+  // .cookies-accept__button
   &__button {
     max-width: 180px;
     padding: 6px 7.8rem;
-    background: $font-color-secondary;
+    color: $font-color-title;
+
+    &.button {
+      transform: skew(-15deg) translateX(-1rem);
+
+      display: block;
+
+      height: auto;
+      padding: 0.8rem 2rem !important;
+      border: 1px solid #83a9e0;
+      border-radius: 10px;
+
+      // background: $font-color-secondary;
+    }
 
     span {
-      color: $color;
+      transform: skew(15deg);
+
+      color: #83a9e0;
+      text-align: center;
       text-transform: none;
       text-transform: uppercase;
     }
