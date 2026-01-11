@@ -793,11 +793,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-@keyframes fadeOutGradient {
-  100% {
-    background-position: 100% 0;
-  }
-}
 @keyframes fadeInGradient {
   100% {
     background-position: 100% 0;
@@ -1834,7 +1829,7 @@ h6 {
 }
 
 [class*=_ibg] {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;

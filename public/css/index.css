@@ -305,8 +305,13 @@
 }
 
 .section-perform__image {
+  position: absolute;
   z-index: 2;
+  top: 0;
+  left: 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 .section-perform__image img {
   position: relative;
@@ -577,38 +582,42 @@
   }
 }
 .section-services__image {
-  position: relative;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  overflow: hidden;
 }
 @media (width <= 768px) {
   .section-services__image {
     height: 250px;
   }
 }
-.section-services__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+.section-services__image:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .services-content__item:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .services-content__title {
   font-family: "PsyType", sans-serif;
   color: hsl(220, 35%, 35%);
 }
 .services-content__text {
+  margin-bottom: 1rem;
   line-height: 130%;
   letter-spacing: 0;
+}
+.services-content__button {
+  transform: skew(-15deg);
+  margin-left: 1rem;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgb(131, 169, 224);
+  line-height: 100%;
+  background-color: hsl(0, 0%, 0%);
+  background-image: radial-gradient(at 52% 40%, hsla(0, 0%, 0%, 0) 0, transparent 50%), radial-gradient(at 14% 1%, hsla(220, 86%, 63%, 0.39) 0, transparent 50%), radial-gradient(at 100% 100%, hsla(220, 86%, 63%, 0.29) 0, transparent 50%);
+}
+.services-content__button span {
+  transform: skew(15deg);
+  font-size: 22px;
+  color: rgb(174, 208, 255);
 }
 
 .section-prices__hgroup {
@@ -1386,9 +1395,6 @@
   letter-spacing: 0;
 }
 
-.section-brands {
-  padding: 6rem 0;
-}
 .section-brands__body {
   padding-block: 6rem !important;
 }
@@ -1426,7 +1432,7 @@
   }
 }
 .section-brands__item:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .section-brands__text {
   line-height: 130%;
@@ -1444,26 +1450,19 @@
   }
 }
 .section-services__image {
-  position: relative;
+  position: relative !important;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+}
+.section-services__image:not(:last-child) {
+  margin-bottom: 3rem;
 }
 @media (width <= 768px) {
   .section-services__image {
     height: 250px;
   }
-}
-.section-services__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
 }
 
 /* Настраиваемые переменные */
