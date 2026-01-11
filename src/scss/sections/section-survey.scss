@@ -14,8 +14,7 @@
 
   // .section-survey__content
   &__content {
-    display: flex;
-    gap: 6rem;
+    width: 100%;
   }
 
   // .section-survey__title
@@ -31,7 +30,7 @@
 
   // .section-survey__column
   &__column {
-    padding: 6rem;
+    width: 100%;
   }
 
   // .section-survey__image
@@ -79,7 +78,15 @@
   &__number {
     border-radius: 50%;
     color: $background;
-    background: $color;
+    background-color: hsl(0deg 0% 0% / 100%);
+    background-image:
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 39%) 0, transparent 50%),
+      radial-gradient(
+        at 100% 100%,
+        hsl(220deg 86% 63% / 29%) 0,
+        transparent 50%
+      );
 
     span {
       display: flex;

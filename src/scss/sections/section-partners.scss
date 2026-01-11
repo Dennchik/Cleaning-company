@@ -4,10 +4,10 @@
 .section-partners {
   // .section-partners__body
   &__body {
-    padding-block: 0 6rem !important;
+    padding-block: 6rem !important;
 
     @include screen-490 {
-      padding-block: 0 16px !important;
+      padding-block: 16px !important;
     }
   }
 }
