@@ -305,7 +305,6 @@
 }
 
 .section-perform__image {
-  position: relative;
   z-index: 2;
   overflow: hidden;
 }
