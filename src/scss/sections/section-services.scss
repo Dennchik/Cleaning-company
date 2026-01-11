@@ -26,7 +26,7 @@
   // .section-services__content
   &__content {
     display: grid;
-    grid-template-columns: minmax(220px, 420px) 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
 
     @include minmax-768-1920 {
@@ -57,10 +57,10 @@
     top: 0;
     right: 0;
 
-    overflow: hidden;
-
     width: 100%;
     height: 100%;
+
+    object-fit: contain;
 
     @include screen-768 {
       height: 250px;
@@ -74,30 +74,8 @@
       width: 100%;
       height: 100%;
 
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
-    }
-  }
-
-  // .section-services__label
-  &__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-1px);
-
-    display: flex;
-    justify-content: center;
-
-    padding: 20px 50px;
-
-    font-family: $font-family-title;
-    color: $font-color-secondary;
-
-    background: $font-color-title;
-
-    @include screen-960 {
-      padding: 12px 40px;
     }
   }
 }

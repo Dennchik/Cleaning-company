@@ -36,6 +36,14 @@
       font-size: 4.4rem;
       color: hsl(220deg 30% 43%);
     }
+
+    @include screen-960 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include screen-768 {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .section-about__column
@@ -75,6 +83,10 @@
   &__image {
     min-width: 125px;
     height: 100%;
+
+    @include screen-425 {
+      display: none;
+    }
   }
 
   // .about-content__text

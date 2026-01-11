@@ -36,6 +36,10 @@
       font-size: 4.4rem;
       color: hsl(220deg 30% 43%);
     }
+
+    @include screen-690 {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .section-credence__column

@@ -2,6 +2,7 @@
 @use '../core/mixins' as *;
 
 .section-survey {
+  position: relative;
   // .section-survey__body
   &__body {
     padding: 6rem 0;
@@ -30,7 +31,6 @@
 
   // .section-survey__column
   &__column {
-    position: relative;
     padding: 6rem;
   }
 
@@ -38,8 +38,13 @@
   &__image {
     position: absolute;
     z-index: 0;
+    top: 0;
+    left: 0;
+
     width: 100%;
 
+    // filter: blur(4px);
+    opacity: 0.3;
     img {
       top: 0;
       left: 0;
@@ -67,36 +72,6 @@
   }
 
   // .section-survey__button
-  &__button {
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-
-    .button-request {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      max-width: 300px;
-
-      color: $font-color-secondary;
-
-      background: $font-color-title;
-      .button {
-        padding: 0 3rem;
-        box-shadow: 0 0 10px #000;
-      }
-    }
-    span {
-      line-height: 150%;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-  }
 }
 
 .item-list {

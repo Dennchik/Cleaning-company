@@ -261,6 +261,21 @@
     font-size: 14px;
   }
 }
+
+.t-text-14 {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0;
+  filter: contrast(150%);
+
+  @include minmax-490-1920 {
+    font-size: calc(12px + (14 - 12) * ((100vw - 490px) / (1920 - 490)));
+  }
+
+  @include screen-490 {
+    font-size: 12px;
+  }
+}
 .t-text-30 {
   font-size: 28px;
   line-height: 130%;

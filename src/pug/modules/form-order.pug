@@ -5,10 +5,16 @@ form(id="form-order").order-form
 				label(for="name").order-form__label 
 				.order-form__input
 					input.input.name(id="name" autocomplete="on" type="text" value="" name="name" error="Обязательное поле" placeholder="Имя*")
+		.order-form__line
 			.order-form__item 
 				label(for="phone").order-form__label 
 				.order-form__input
 					input.input.phone(id="phone" autocomplete="off" type="tel" name="phone" error="Обязательное поле" placeholder="+7 (___) ___-__-__")
+		.order-form__line
+			.order-form__item 
+				.order-form__input
+					input.input.email(id="email" type="email" name="email" autocomplete="email" value="" error="Обязательное поле" placeholder="E-mail*")
+
 		.order-form__line
 			.order-form__item 
 				label(for="comment").order-form__label 

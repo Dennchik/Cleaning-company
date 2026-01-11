@@ -104,12 +104,6 @@
 
     width: 100%;
 
-    // background-color: hsl(0deg 2% 4% / 100%);
-    // background-image:
-    //   radial-gradient(at 51% 29%, hsl(20deg 0% 0% / 100%) 0, transparent 50%),
-    //   radial-gradient(at 51% 0%, hsl(212deg 2% 2% / 95%) 0, transparent 50%),
-    //   radial-gradient(at 66% 23%, hsl(214deg 82% 62% / 38%) 0, transparent 50%),
-    //   radial-gradient(at 0% 100%, hsl(214deg 82% 62% / 38%) 0, transparent 50%);
     background-color: hsl(0deg 0% 0% / 100%);
     background-image:
       radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
@@ -135,7 +129,7 @@
 }
 
 ._bg-color {
-  margin: 6rem 0;
+  margin: 0;
   background: $font-color-title;
 
   @include screen-490 {
@@ -156,7 +150,11 @@
   }
 
   &__footer {
-    background: #243444;
+    background-color: hsl(0deg 0% 0% / 100%);
+    background-image:
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 120% 1%, hsl(220deg 86% 63% / 49%) 0, transparent 50%),
+      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%);
   }
 }
 

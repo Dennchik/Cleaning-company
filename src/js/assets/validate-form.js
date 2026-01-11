@@ -2,6 +2,7 @@ export function validateForm() {
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.form-order').forEach((form, index) => {
       const name = form.querySelector('.input.name');
+      const email = form.querySelector('.input.email');
       const phone = form.querySelector('.input.phone');
       const checkbox = form.querySelector('.checkbox__input');
       const sendButton = form.querySelector('.send-button');
@@ -9,7 +10,11 @@ export function validateForm() {
         .querySelector('.send-button')
         .closest('.button-container');
 
-      if ([name, phone, checkbox, sendButton, buttonContainer].includes(null))
+      if (
+        [name, phone, email, checkbox, sendButton, buttonContainer].includes(
+          null
+        )
+      )
         return;
 
       /**
@@ -51,6 +56,7 @@ export function validateForm() {
 
       function validateFormFields() {
         const nameVal = name.value.trim();
+        // const emailVal = email.value.trim();
         const phoneVal = phone.value.trim();
         const isValid =
           nameVal.length >= 3 && phoneVal.length === 18 && checkbox.checked;
@@ -64,11 +70,13 @@ export function validateForm() {
         if (name.value.trim().length < 3) animateError(name);
         if (phone.value.trim().length !== 18) animateError(phone);
         if (!checkbox.checked) animateError(checkbox);
+        if (email.value.trim().length < 3) animateError(email);
       }
 
       name.addEventListener('input', validateFormFields);
       phone.addEventListener('input', validateFormFields);
       checkbox.addEventListener('change', validateFormFields);
+      email.addEventListener('email', validateFormFields);
 
       validateFormFields();
 
@@ -99,6 +107,10 @@ export function validateForm() {
           if (phone && phone.value) {
             formData.append('phone', phone.value.trim());
           }
+          // Получаем email
+          if (email && email.value) {
+            formData.append('email', email.value.trim());
+          }
 
           // Получаем имя
           if (name && name.value) {
@@ -124,6 +136,7 @@ export function validateForm() {
               // Очищаем форму
               if (phone) phone.value = '';
               if (name) name.value = '';
+              if (email) email.value = '';
               if (checkbox) checkbox.checked = false;
 
               // Делаем форму неактивной

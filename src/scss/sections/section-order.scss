@@ -183,37 +183,8 @@
 
   // .order-form__line
   &__line {
-    display: flex;
-    height: 100%;
-
-    &:nth-child(1) {
-      gap: 2rem;
-
-      .order-form__item {
-        flex: 0 1 50%;
-      }
-
-      @include screen-490 {
-        flex-direction: column;
-        gap: 12px;
-        height: auto;
-      }
-    }
-
-    &:nth-child(2) {
-      flex-direction: column;
-      .order-form__input {
-        min-height: 110px;
-      }
-
-      @include screen-768 {
-        margin-bottom: 2rem;
-      }
-
-      @include screen-490 {
-        margin-bottom: 12px;
-      }
-    }
+    // display: flex;
+    // height: 100%;
   }
 
   // .order-form__item
