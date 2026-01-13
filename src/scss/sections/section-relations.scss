@@ -1,0 +1,48 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-relations {
+  background-color: #abc5ee5d;
+  // .section-relations__body
+  &__body {
+    padding-block: 6rem !important;
+  }
+}
+
+.relations-list {
+  // .relations-list__title
+  &__title {
+    margin-bottom: 3rem;
+    color: hsl(220deg 35% 35%);
+    text-transform: uppercase;
+  }
+
+  // .relations-list__content
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  // .relations-list__column
+  &__column {
+    flex: 0 0 33.333%;
+    padding: 16px;
+    border: 1px solid rgb(150 189 245);
+    border-radius: 10px;
+  }
+
+  // .relations-list__title-text
+  &__title-text {
+    margin-bottom: 0.5rem;
+    color: hsl(220deg 35% 35%);
+  }
+
+  // .relations-list__text
+  &__text {
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0;
+    filter: contrast(150%);
+  }
+}

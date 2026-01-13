@@ -16,7 +16,7 @@
   // .section-about__title
   &__title {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 3rem;
 
     font-family: $font-family-title;
     line-height: 110%;
@@ -51,12 +51,6 @@
     width: 100%;
     border: 1px solid $border-button-color;
     border-radius: 10px;
-
-    &:nth-child(1) {
-      p:not(:last-child) {
-        margin-bottom: 3rem;
-      }
-    }
   }
 
   // .section-about__item
@@ -91,7 +85,7 @@
 
   // .about-content__text
   &__text {
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 2rem;
   }
 
   //.about-content__address

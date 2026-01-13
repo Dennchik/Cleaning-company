@@ -2,85 +2,64 @@
 @use '../core/mixins' as *;
 
 .section-survey {
-  position: relative;
+  border-top: 2px solid rgb(25 42 75);
+  border-bottom: 2px solid rgb(25 42 75);
+  background-color: #abc5ee5d;
   // .section-survey__body
   &__body {
-    padding: 6rem 0;
-
-    @include screen-490 {
-      padding: 16px 0;
-    }
+    padding-block: 6rem !important;
   }
-
   // .section-survey__content
   &__content {
-    width: 100%;
-  }
-
-  // .section-survey__title
-  &__title {
-    margin-bottom: 2rem;
-
-    font-family: $font-family-title;
-    line-height: 110%;
-    color: $font-color-title;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
+    display: flex;
   }
 
   // .section-survey__column
   &__column {
-    width: 100%;
-  }
+    flex: 0 1 50%;
 
-  // .section-survey__image
-  &__image {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    // filter: blur(4px);
-    opacity: 0.3;
-    img {
-      top: 0;
-      left: 0;
-      width: 100%;
+    &:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-  // .section-survey__list
-  &__list {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 3.4rem;
-    padding: 6rem;
+  // .section-survey__title
+  &__title {
+    max-width: 960px;
+    margin-bottom: 3rem;
+    line-height: 100%;
+    color: hsl(220deg 35% 35%);
+
+    span {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
-  // .section-survey__item
-  &__item {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-    }
+  // .section-survey__text
+  &__text {
+    line-height: 130%;
+    letter-spacing: 0;
+    filter: contrast(150%);
   }
 
   // .section-survey__button
-}
+  &__button {
+    transform: skew(-15deg);
 
-.item-list {
-  // .item-list__number
-  &__number {
-    border-radius: 50%;
-    color: $background;
-    background-color: hsl(0deg 0% 0% / 100%);
+    margin-left: 1rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid rgb(131 169 224);
+
+    line-height: 100%;
+
+    background-color: hsl(0deg 0% 0%);
     background-image:
-      radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
+      radial-gradient(at 52% 40%, hsl(0deg 0% 0% / 0%) 0, transparent 50%),
       radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 39%) 0, transparent 50%),
       radial-gradient(
         at 100% 100%,
@@ -89,33 +68,10 @@
       );
 
     span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 6rem;
-      height: 6rem;
-
-      @include screen-375 {
-        width: 40px;
-        height: 40px;
-      }
+      transform: skew(15deg);
+      padding: 0 3rem;
+      font-size: 22px;
+      color: rgb(174 208 255);
     }
-  }
-
-  // .item-list__title
-
-  &__title {
-    font-family: $font-family-title;
-    line-height: 100%;
-    color: $font-color-title;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
-  }
-
-  // .item-list__text
-  &__text {
-    line-height: 130%;
-    letter-spacing: 0;
   }
 }

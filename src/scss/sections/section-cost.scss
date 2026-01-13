@@ -1,0 +1,100 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-cost {
+  // .section-cost__body
+  &__body {
+    overflow: hidden;
+    padding-block: 6rem !important;
+
+    @include screen-490 {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  // .section-cost__title
+  &__title {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: $font-color-secondary;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  // .section-cost__content
+  &__content {
+    display: flex;
+    column-gap: 6rem;
+    color: $font-color-secondary;
+
+    &:nth-child(1) {
+      @include min-768 {
+        margin-bottom: 2rem;
+        .section-order__column {
+          @include screen-768 {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+
+    @include screen-768 {
+      flex-direction: column;
+    }
+  }
+
+  // .section-cost__column
+  &__column {
+    flex: 0 1 50%;
+    gap: 3rem;
+  }
+
+  // .section-cost__form
+  &__form {
+    height: 100%;
+  }
+
+  // .section-cost__text
+  &__text {
+    margin-bottom: 3rem;
+  }
+
+  // .section-cost__button
+  &__button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 300px;
+
+    color: $font-color-title;
+
+    @include min-768 {
+      justify-content: start;
+    }
+
+    .button {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      background: $font-color-secondary;
+
+      @include screen-490 {
+        max-width: 100%;
+      }
+    }
+
+    span {
+      line-height: 150%;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+}

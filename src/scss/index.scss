@@ -2,20 +2,18 @@
 @use 'assets/swiper-11.2.5';
 // todo -------------------------- Section -------------------------------------
 @use 'sections/section-perform';
-@use 'sections/section-about';
 @use 'sections/section-credence';
+@use 'sections/section-about';
 @use 'sections/section-services';
-@use 'sections/section-prices';
-@use 'sections/section-order';
-@use 'sections/section-project';
-@use 'sections/section-partners';
-@use 'sections/section-ordercall';
-@use 'sections/section-info';
-@use 'sections/section-consultation';
+@use 'sections/section-relations';
+@use 'sections/section-cooperation';
 @use 'sections/section-survey';
-@use 'sections/section-brands';
-@use 'sections/running-line';
+@use 'sections/section-info';
+@use 'sections/section-cost';
 @use 'sections/section-map';
+@use 'sections/section-brands';
+
+@use 'sections/section-order';
 // todo -------------------------- Modules -------------------------------------
 @use 'modules/form-list';
 @use 'modules/cookies-accept';

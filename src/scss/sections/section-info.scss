@@ -13,7 +13,7 @@
 
   // .section-info__title
   &__title {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     font-family: $font-family-title;
     line-height: 110%;
@@ -66,6 +66,9 @@
 .info-content {
   // .info-content__item
   &__item {
+    display: flex;
+    align-items: flex-start;
+
     &:not(:last-child) {
       margin-bottom: 3rem;
 
@@ -91,5 +94,15 @@
   // .info-content__text
   &__text {
     line-height: 130%;
+  }
+
+  // .info-content__icon
+  &__icon {
+    display: flex;
+    .icon {
+      margin-right: 2rem;
+      font-size: 24px;
+      color: hsl(220deg 35% 35%);
+    }
   }
 }
