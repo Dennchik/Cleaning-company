@@ -1,9 +1,9 @@
 export function validateChecked() {
-  const fieldsets = document.querySelectorAll(
+  const fieldSets = document.querySelectorAll(
     'fieldset.form-question__fieldset-table'
   );
 
-  fieldsets.forEach((fieldset) => {
+  fieldSets.forEach((fieldset) => {
     const nextButtonWrapper = fieldset.querySelector(
       '.form-question__button._btn-next'
     );

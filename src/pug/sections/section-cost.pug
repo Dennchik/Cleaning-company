@@ -1,13 +1,23 @@
-.section-cost
+.section-cost.form-order
 	.section-cost__body._container
 		.section-cost__title 
 			h2.t-h1 УЗНАЙТЕ ориентировочную стоимость уборки
 		.section-cost__content
-			.section-cost__column.its-el-right 
-				include ../modules/form-order 
-			.section-cost__column.its-el-left 
-				.section-cost__text После расчёта менеджер свяжется с&nbsp;вами, уточнит детали и&nbsp;вышлет КП&nbsp;+&nbsp;договор в&nbsp;течение часа.
-				.section-cost__button.button.button-container
-					button.button.send-button.t-h2(form="form-order" type="button", disabled)
-						span Рассчитать
-						span.grad-blink 
+			.section-cost__row
+				.section-cost__column.its-el-right 
+					include ../modules/form-cost
+				.section-cost__column.its-el-left 
+					.section-cost__text.t-text После расчёта менеджер свяжется с&nbsp;вами, уточнит детали и&nbsp;вышлет КП&nbsp;+&nbsp;договор в&nbsp;течение часа.
+					.section-cost__button.button-container
+						button(form="form-cost" type="button" disabled).button.send-button.t-h2 
+							span Рассчитать
+							span.grad-blink  
+			.section-cost__row 
+				.section-cost__column
+					.section-cost__checkbox(data-da="bp-4" data-da-position="1" data-da-resolution="768") 
+						.checkbox
+							label.checkbox__label 
+								input(type="checkbox" id="agree" name="agree" form="form-cost").checkbox__input 
+								span.checkbox__checked
+									+iconfont('check', '_icon')
+						span.section-cost__text Подтверждаю, что&nbsp;ознакомился&nbsp;(&#8209;лась) с&nbsp;политикой конфиденциальности и&nbsp;даю&nbsp;согласие на&nbsp;обработку персональных данных

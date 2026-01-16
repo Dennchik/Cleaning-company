@@ -25,26 +25,9 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
-            'youtube': '&#xea9d;',
-            'phone-call': '&#xe919;',
-            'sign-out': '&#xe916;',
-            'hand-shake': '&#xf2b6;',
-            'financial-system': '&#xe905;',
-            'management': '&#xe906;',
-            'youtube-square': '&#xf166;',
-            'whatsapp': '&#xf232;',
-            'vk-brand': '&#xf189;',
-            'telegram-fly': '&#xe91b;',
-            'unlink': '&#xf127;',
-            'angle-left': '&#xf104;',
-            'angle-right': '&#xf105;',
-            'angle-up': '&#xf106;',
-            'angle-down': '&#xf107;',
-            'minus': '&#xe908;',
-            'plus': '&#xe911;',
-            'published_with_changes': '&#xe907;',
             'check': '&#xe90f;',
-            'dzen': '&#xe93b;',
+            'check-box': '&#xe900;',
+            'pencil-alt': '&#xe901;',
           '0': 0
         };
         delete icons['0'];

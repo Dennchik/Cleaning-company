@@ -1,6 +1,7 @@
 //! ✅ vite.config.js
 import { defineConfig } from 'vite';
 //* ✅ Path
+// import pugPlugin from 'vite-plugin-pug';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { paths } from './vite/config/path.js';
@@ -31,6 +32,7 @@ export default defineConfig(({ command, mode }) => {
     base: './',
 
     plugins: [
+      // pugPlugin(),
       fonts(),
       fontStyle(),
       convertImagesToWebp(app.webp),

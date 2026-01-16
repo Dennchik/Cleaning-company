@@ -1,0 +1,90 @@
+@use '../core/variables' as *;
+
+.select > ._collapse:not(._show) {
+  display: none;
+}
+
+.select {
+  color: #000;
+  background-color: #fff;
+
+  &._active-collapse {
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  // .select__input
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid $color-title;
+    border-radius: 4px;
+
+    outline: none;
+
+    &.select__button {
+      cursor: pointer;
+    }
+
+    input {
+      cursor: pointer;
+
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:focus {
+        box-shadow: 0 0 5px 2px var(--alarm-color);
+      }
+    }
+  }
+
+  // .select__button
+  &__button {
+    text-align-last: left;
+  }
+
+  // .select__list
+  &__list {
+    position: absolute;
+    z-index: 9;
+
+    width: 100%;
+    margin-top: 3px;
+    border: 1px solid $color-title;
+    border-radius: 4px;
+
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px var(--alarm-color);
+
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  // .select__item
+  &__item {
+    cursor: pointer;
+    padding: 0 10px;
+    line-height: 150%;
+    // color: $text-color;
+
+    &:first-child {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+
+    &._selected {
+      background-color: rgb(135 169 238);
+    }
+
+    &:hover {
+      // color: $primary-color;
+      background-color: rgb(135 169 238 / 33.6%);
+    }
+  }
+}

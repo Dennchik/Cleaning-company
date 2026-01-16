@@ -12,6 +12,9 @@
     transition: opacity 0.9s ease-in-out;
   }
 }
+.select > ._collapse:not(._show) {
+  display: none;
+}
 
 //* ----------------------------------------------------------------------------
 .return-button {

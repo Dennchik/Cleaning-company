@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wcjc59');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wcjc59#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wcjc59')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vq70q7')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wcjc59')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vq70q7')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wcjc59##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vq70q7##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -43,113 +43,18 @@
   letter-spacing: 0;
 }
 
-.icon-phone-outbound {
-  &::before {
-    content: $icon-phone-outbound;
-  }
-}
-.icon-youtube-lg {
-  &::before {
-    content: $icon-youtube-lg;
-  }
-}
-.icon-phone-call {
-  &::before {
-    content: $icon-phone-call;
-  }
-}
-.icon-sign-out {
-  &::before {
-    content: $icon-sign-out;
-  }
-}
-.icon-hand-shake {
-  &::before {
-    content: $icon-hand-shake;
-  }
-}
-.icon-financial-system {
-  &::before {
-    content: $icon-financial-system;
-  }
-}
-.icon-management {
-  &::before {
-    content: $icon-management;
-  }
-}
-.icon-youtube-square {
-  &::before {
-    content: $icon-youtube-square;
-  }
-}
-.icon-youtube {
-  &::before {
-    content: $icon-youtube;
-  }
-}
-.icon-whatsapp {
-  &::before {
-    content: $icon-whatsapp;
-  }
-}
-.icon-vk-brand {
-  &::before {
-    content: $icon-vk-brand;
-  }
-}
-.icon-telegram-fly {
-  &::before {
-    content: $icon-telegram-fly;
-  }
-}
-.icon-unlink {
-  &::before {
-    content: $icon-unlink;
-  }
-}
-.icon-angle-left {
-  &::before {
-    content: $icon-angle-left;
-  }
-}
-.icon-angle-right {
-  &::before {
-    content: $icon-angle-right;
-  }
-}
-.icon-angle-up {
-  &::before {
-    content: $icon-angle-up;
-  }
-}
-.icon-angle-down {
-  &::before {
-    content: $icon-angle-down;
-  }
-}
-.icon-minus {
-  &::before {
-    content: $icon-minus;
-  }
-}
-.icon-plus {
-  &::before {
-    content: $icon-plus;
-  }
-}
-.icon-published-changes {
-  &::before {
-    content: $icon-published-changes;
-  }
-}
 .icon-check {
   &::before {
     content: $icon-check;
   }
 }
-.icon-dzen {
+.icon-check-box {
   &::before {
-    content: $icon-dzen;
+    content: $icon-check-box;
+  }
+}
+.icon-pencil-alt {
+  &::before {
+    content: $icon-pencil-alt;
   }
 }

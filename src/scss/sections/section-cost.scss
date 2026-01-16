@@ -4,12 +4,11 @@
 .section-cost {
   // .section-cost__body
   &__body {
-    overflow: hidden;
     padding-block: 6rem !important;
+    color: #fff;
 
     @include screen-490 {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-block: 32px;
     }
   }
 
@@ -27,19 +26,31 @@
 
   // .section-cost__content
   &__content {
+    width: 100%;
+  }
+
+  // .section-order__row
+  &__row {
+    position: relative;
     display: flex;
     column-gap: 6rem;
-    color: $font-color-secondary;
 
     &:nth-child(1) {
+      z-index: 9;
+
       @include min-768 {
         margin-bottom: 2rem;
+
         .section-order__column {
           @include screen-768 {
             margin-bottom: 12px;
           }
         }
       }
+    }
+
+    &:nth-child(2) {
+      z-index: 1;
     }
 
     @include screen-768 {
@@ -49,18 +60,20 @@
 
   // .section-cost__column
   &__column {
+    display: flex;
     flex: 0 1 50%;
-    gap: 3rem;
-  }
-
-  // .section-cost__form
-  &__form {
-    height: 100%;
+    flex-direction: column;
   }
 
   // .section-cost__text
   &__text {
-    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: $font-color-secondary;
+
+    &:not(:last-child) {
+      margin-bottom: 1.4rem;
+    }
   }
 
   // .section-cost__button
@@ -71,7 +84,6 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     max-width: 300px;
 
     color: $font-color-title;
@@ -95,6 +107,43 @@
       line-height: 150%;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+  }
+
+  // .section-cost__form
+  &__form {
+    height: 100%;
+  }
+
+  // .section-cost__form
+  &__checkbox {
+    display: flex;
+    gap: 1rem;
+
+    @include screen-768 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .checkbox {
+    @include screen-768 {
+      margin-bottom: 2rem;
+    }
+
+    @include screen-490 {
+      margin-bottom: 12px;
+    }
+
+    // .checkbox__label
+    &__label {
+      cursor: pointer;
+
+      position: relative;
+
+      margin-top: 3px;
+
+      color: $font-color-secondary;
+      letter-spacing: 0;
     }
   }
 }

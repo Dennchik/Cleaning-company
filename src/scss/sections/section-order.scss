@@ -20,6 +20,7 @@
     &:nth-child(1) {
       @include min-768 {
         margin-bottom: 2rem;
+
         .section-order__column {
           @include screen-768 {
             margin-bottom: 12px;

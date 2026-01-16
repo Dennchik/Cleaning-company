@@ -2,10 +2,11 @@ import '../scss/main.scss';
 
 import loaded from './assets/preloader.js';
 import { smoother } from './animations/animations.jsx';
-import { validateForm } from './assets/validate-form.js';
+import { initFormValidation } from './assets/validate-form.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
 import { validateChecked } from './assets/validate-checked.js';
+import { select } from './assets/itsSelect.js';
 import {
   animateHeader,
   smoothScrollTitle,
@@ -32,13 +33,14 @@ fadeInItem('.its-el');
 fadeInItemLeft('.its-el-left');
 fadeInItemRight('.its-el-right');
 smoothScrollTitle('.el-item');
-validateForm();
+initFormValidation();
 animateHeader();
 anchorsSmoothScrolling();
 sidebarMenuHandle();
 dynamicAdaptive();
 shadowScrollHeader();
-toggleModal();
+select();
+// toggleModal();
 if (!isMobile) {
   smoother();
 }
