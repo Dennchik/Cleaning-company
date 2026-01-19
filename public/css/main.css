@@ -569,6 +569,11 @@
   width: 100%;
   color: #fff;
 }
+@media (width <= 768px) {
+  .header__content {
+    grid-template-columns: auto min-content;
+  }
+}
 @media screen and (width <= 490px) {
   .header__content {
     gap: 1rem;
@@ -586,6 +591,11 @@
   position: relative;
   z-index: 1;
   justify-self: end;
+}
+@media (width <= 768px) {
+  .header__column:nth-child(2) {
+    display: none;
+  }
 }
 .header__column:nth-child(3) {
   position: relative;

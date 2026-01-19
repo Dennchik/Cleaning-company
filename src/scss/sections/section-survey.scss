@@ -17,6 +17,11 @@
   // .section-survey__content
   &__content {
     display: flex;
+
+    @include screen-768 {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   // .section-survey__column

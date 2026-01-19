@@ -69,6 +69,10 @@
 
     color: #fff;
 
+    @include screen-768 {
+      grid-template-columns: auto min-content;
+    }
+
     @include screen-490 {
       gap: 1rem;
     }
@@ -91,6 +95,10 @@
       position: relative;
       z-index: 1;
       justify-self: end;
+
+      @include screen-768 {
+        display: none;
+      }
     }
 
     &:nth-child(3) {

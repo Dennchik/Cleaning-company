@@ -770,6 +770,12 @@
 .section-survey__content {
   display: flex;
 }
+@media (width <= 768px) {
+  .section-survey__content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
 .section-survey__column {
   flex: 0 1 50%;
 }
