@@ -185,16 +185,17 @@
 
 .t-h1 {
   font-size: 64px;
+  line-height: 100%;
   filter: contrast(120%);
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-h1 {
-    font-size: calc(32px + 32 * (100vw - 490px) / 1430) !important;
+    font-size: calc(28px + 36 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
   .t-h1 {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 }
 
@@ -305,7 +306,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: "PsyType", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -519,22 +520,8 @@
   transition: background-size 400ms;
 }
 
-.button-blink {
-  pointer-events: none; /* Чтобы не перекрывал клики */
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: -100%;
-  transform: translateX(-50%) skewX(-45deg);
-  width: 20%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(4, 217, 255, 0.26), transparent);
-}
-
 .header {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -552,23 +539,8 @@
   height: 2px;
   transition: all 0.7s ease-in-out;
 }
-.header .header-blink {
-  pointer-events: none; /* Чтобы не перекрывал клики */
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: -100%;
-  transform: translateX(-50%) skewX(-45deg);
-  width: 70%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(4, 217, 255, 0.2), transparent);
-}
 .header.with-shadow {
   transition: all 0.5s ease-in-out;
-}
-.header.with-shadow::before {
-  opacity: 1;
-  animation: fadeInGradient 1.9s ease-in-out forwards;
 }
 .header.with-shadow::after {
   width: 100%;
@@ -623,7 +595,7 @@
 }
 .header__logo {
   position: relative;
-  width: 15rem;
+  width: auto;
   height: 10rem;
 }
 .header__logo svg {
@@ -797,11 +769,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-@keyframes fadeInGradient {
-  100% {
-    background-position: 100% 0;
-  }
-}
 .footer {
   margin: 6rem 0;
 }
@@ -812,7 +779,7 @@
   padding-bottom: 3rem;
   font-size: 1.4rem;
   line-height: 150%;
-  color: #fff;
+  color: #a6c9ff;
 }
 @media screen and (width <= 490px) {
   .footer__footer {
@@ -838,7 +805,7 @@
 }
 .footer__body {
   padding: 6rem 0;
-  color: #fff;
+  color: #a6c9ff;
 }
 .footer__header {
   display: flex;
@@ -973,7 +940,7 @@
 .contacts__text {
   font-weight: 300;
   line-height: 130%;
-  color: #fff;
+  color: #a6c9ff;
   opacity: 0.8;
 }
 
@@ -1424,7 +1391,6 @@ h6 {
 
 .select {
   color: #000;
-  background-color: #fff;
 }
 .select._active-collapse {
   transition: box-shadow 0.2s ease-in-out;
@@ -1433,8 +1399,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgb(143, 242, 255);
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #fff;
   outline: none;
 }
 .select__input.select__button {
@@ -1445,12 +1411,14 @@ h6 {
   width: 100%;
   height: 100%;
   padding: 10px;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .select__input input:focus {
   box-shadow: 0 0 5px 2px var(--alarm-color);
 }
 .select__button {
+  border-radius: 5px;
   text-align-last: left;
 }
 .select__list {
@@ -1458,7 +1426,6 @@ h6 {
   z-index: 9;
   width: 100%;
   margin-top: 3px;
-  border: 1px solid rgb(143, 242, 255);
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 0 5px 2px var(--alarm-color);
@@ -1801,6 +1768,11 @@ h6 {
   background-color: hsl(0, 0%, 0%);
   background-image: radial-gradient(at 52% 40%, hsl(28, 0%, 0%) 0, transparent 50%), radial-gradient(at 14% 1%, hsla(220, 86%, 63%, 0.39) 0, transparent 50%), radial-gradient(at 100% 100%, hsla(220, 86%, 63%, 0.29) 0, transparent 50%);
 }
+@media screen and (width <= 1024px) {
+  .page__button-outbound {
+    top: 65px;
+  }
+}
 .page__button-outbound span {
   transform: skew(15deg);
   font-size: 22px;
@@ -1837,11 +1809,6 @@ h6 {
 ._bg-color {
   margin: 0;
   background: hsl(220, 35%, 35%);
-}
-@media screen and (width <= 490px) {
-  ._bg-color {
-    margin: 16px 0;
-  }
 }
 
 .main-content__section {

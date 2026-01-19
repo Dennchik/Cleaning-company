@@ -57,7 +57,7 @@ class FormValidator {
     this.elements.buttonContainer =
       this.elements.sendButton?.closest('.button-container');
 
-    // Дебаунсинг для инпутов
+    // Дебаунсинг для inputs
     this.validateDebounced = this.debounce(
       this.validateFormFields.bind(this),
       300

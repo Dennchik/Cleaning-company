@@ -407,6 +407,11 @@
   padding: 1rem 2rem !important;
   border: 1px solid rgb(131, 169, 224);
 }
+@media screen and (width <= 375px) {
+  .section-perform__button .button {
+    transform: skew(-15deg) translateX(0);
+  }
+}
 .section-perform__button span {
   transform: skew(15deg);
   font-size: 2.2rem;
@@ -423,8 +428,7 @@
 }
 @media screen and (width <= 490px) {
   .section-credence__body {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-block: 4rem !important;
   }
 }
 .section-credence__title {
@@ -468,8 +472,7 @@
 }
 @media screen and (width <= 490px) {
   .section-about__body {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-block: 4rem !important;
   }
 }
 .section-about__title {
@@ -544,7 +547,7 @@
 }
 @media screen and (width <= 490px) {
   .section-services__body {
-    padding-block: 1.6rem !important;
+    padding-block: 4rem !important;
   }
 }
 .section-services__title {
@@ -626,6 +629,11 @@
 .section-relations__body {
   padding-block: 6rem !important;
 }
+@media screen and (width <= 490px) {
+  .section-relations__body {
+    padding-block: 4rem !important;
+  }
+}
 
 .relations-list__title {
   margin-bottom: 3rem;
@@ -636,6 +644,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+@media (width <= 768px) {
+  .relations-list__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (width <= 490px) {
+  .relations-list__content {
+    grid-template-columns: 1fr;
+  }
 }
 .relations-list__column {
   flex: 0 0 33.333%;
@@ -658,11 +676,11 @@
   position: relative;
 }
 .section-cooperation__body {
-  padding: 6rem 0;
+  padding-block: 6rem !important;
 }
 @media screen and (width <= 490px) {
   .section-cooperation__body {
-    padding: 16px 0;
+    padding-block: 4rem !important;
   }
 }
 .section-cooperation__content {
@@ -744,6 +762,11 @@
 .section-survey__body {
   padding-block: 6rem !important;
 }
+@media screen and (width <= 490px) {
+  .section-survey__body {
+    padding-block: 4rem !important;
+  }
+}
 .section-survey__content {
   display: flex;
 }
@@ -789,11 +812,11 @@
 }
 
 .section-info__body {
-  padding: 6rem 0;
+  padding-block: 6rem !important;
 }
 @media screen and (width <= 490px) {
   .section-info__body {
-    padding: 16px 0;
+    padding-block: 4rem !important;
   }
 }
 .section-info__title {
@@ -823,7 +846,7 @@
   }
 }
 @media (width <= 690px) {
-  .section-info__column:nth-child(2) {
+  .section-info__column:nth-child(1) {
     display: none;
   }
 }
@@ -881,7 +904,7 @@
 }
 @media screen and (width <= 490px) {
   .section-cost__body {
-    padding-block: 32px;
+    padding-block: 4rem !important;
   }
 }
 .section-cost__title {
@@ -900,18 +923,14 @@
   position: relative;
   display: flex;
   column-gap: 6rem;
+  margin-bottom: 2rem;
 }
 .section-cost__row:nth-child(1) {
   z-index: 9;
 }
-@media (width >= 768.98px) {
+@media (width <= 768px) {
   .section-cost__row:nth-child(1) {
-    margin-bottom: 2rem;
-  }
-}
-@media (width >= 768.98px) and (width <= 768px) {
-  .section-cost__row:nth-child(1) .section-order__column {
-    margin-bottom: 12px;
+    row-gap: 3rem;
   }
 }
 .section-cost__row:nth-child(2) {
@@ -920,6 +939,9 @@
 @media (width <= 768px) {
   .section-cost__row {
     flex-direction: column;
+  }
+  .section-cost__row:nth-child(2) {
+    margin-bottom: 0;
   }
 }
 .section-cost__column {
@@ -933,7 +955,7 @@
   color: rgb(250, 250, 255);
 }
 .section-cost__text:not(:last-child) {
-  margin-bottom: 1.4rem;
+  margin-bottom: 4rem;
 }
 .section-cost__button {
   position: relative;
@@ -942,6 +964,11 @@
   justify-content: center;
   max-width: 300px;
   color: hsl(220, 35%, 35%);
+}
+@media (width <= 768px) {
+  .section-cost__button {
+    max-width: 100%;
+  }
 }
 @media (width >= 768.98px) {
   .section-cost__button {
@@ -994,6 +1021,57 @@
   letter-spacing: 0;
 }
 
+.form-cost {
+  height: 100%;
+}
+.form-cost__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+@media screen and (width <= 490px) {
+  .form-cost__body {
+    gap: 12px;
+  }
+}
+.form-cost__item {
+  width: 100%;
+  height: 100%;
+}
+.form-cost__input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 5.6rem;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  color: #243444;
+  background: rgb(255, 255, 255);
+}
+.form-cost__input input {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 130%;
+}
+.form-cost__text {
+  height: 100%;
+  padding: 1.5rem 2rem;
+  background: rgb(255, 255, 255);
+}
+.form-cost__comment {
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #243444;
+}
+.form-cost__checkbox {
+  margin-top: 12px;
+}
+
 .section-map__column {
   margin: 0 -2rem;
 }
@@ -1011,12 +1089,7 @@
 }
 @media screen and (width <= 490px) {
   .section-brands__body {
-    padding-block: 1.6rem !important;
-  }
-}
-@media screen and (width <= 490px) {
-  .section-brands {
-    padding: 16px 0;
+    padding-block: 3rem !important;
   }
 }
 .section-brands__title {
@@ -1056,7 +1129,7 @@
   height: auto;
 }
 @media (width <= 768px) {
-  .section-services__column:nth-child(1) {
+  .section-services__column:nth-child(2) {
     display: none;
   }
 }
@@ -1082,7 +1155,7 @@
 }
 @media screen and (width <= 490px) {
   .section-order__body {
-    padding-block: 32px;
+    padding-block: 4rem !important;
   }
 }
 .section-order__row {
@@ -1102,6 +1175,7 @@
 @media (width <= 768px) {
   .section-order__row {
     flex-direction: column;
+    row-gap: 3rem;
   }
 }
 .section-order__column {
@@ -1114,7 +1188,7 @@
 }
 @media (width <= 768px) {
   .section-order__info {
-    margin-bottom: 12px;
+    margin-top: 3rem;
   }
 }
 .section-order__title {
@@ -1161,6 +1235,11 @@
   justify-content: center;
   max-width: 300px;
   color: hsl(220, 35%, 35%);
+}
+@media (width <= 768px) {
+  .section-order__button {
+    max-width: 100%;
+  }
 }
 @media (width >= 768.98px) {
   .section-order__button {
@@ -1238,6 +1317,7 @@
   height: 100%;
   max-height: 5.6rem;
   padding: 1.5rem 2rem;
+  border-radius: 5px;
   color: #243444;
   background: rgb(255, 255, 255);
 }
@@ -1249,6 +1329,7 @@
 .order-form__text {
   height: 100%;
   padding: 1.5rem 2rem;
+  border-radius: 5px;
   background: rgb(255, 255, 255);
 }
 .order-form__comment {

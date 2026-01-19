@@ -8,13 +8,13 @@
 					include ../modules/form-cost
 				.section-cost__column.its-el-left 
 					.section-cost__text.t-text После расчёта менеджер свяжется с&nbsp;вами, уточнит детали и&nbsp;вышлет КП&nbsp;+&nbsp;договор в&nbsp;течение часа.
-					.section-cost__button.button-container
+					.section-cost__button.button-container(data-da="bp-8" data-da-position="1" data-da-resolution="768") 
 						button(form="form-cost" type="button" disabled).button.send-button.t-h2 
 							span Рассчитать
 							span.grad-blink  
 			.section-cost__row 
-				.section-cost__column
-					.section-cost__checkbox(data-da="bp-4" data-da-position="1" data-da-resolution="768") 
+				.section-cost__column.bp-8
+					.section-cost__checkbox
 						.checkbox
 							label.checkbox__label 
 								input(type="checkbox" id="agree" name="agree" form="form-cost").checkbox__input 
