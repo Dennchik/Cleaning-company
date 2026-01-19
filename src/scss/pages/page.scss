@@ -73,6 +73,10 @@
         transparent 50%
       );
 
+    @include screen-1024 {
+      top: 65px;
+    }
+
     span {
       transform: skew(15deg);
       font-size: 22px;
@@ -131,10 +135,6 @@
 ._bg-color {
   margin: 0;
   background: $font-color-title;
-
-  @include screen-490 {
-    margin: 16px 0;
-  }
 }
 
 .main-content {

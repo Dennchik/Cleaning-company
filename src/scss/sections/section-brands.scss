@@ -7,12 +7,8 @@
     padding-block: 6rem !important;
 
     @include screen-490 {
-      padding-block: 1.6rem !important;
+      padding-block: 3rem !important;
     }
-  }
-
-  @include screen-490 {
-    padding: 16px 0;
   }
 
   // .section-brands__title
@@ -61,7 +57,7 @@
     flex-direction: column;
     height: auto;
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       @include screen-768 {
         display: none;
       }

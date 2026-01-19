@@ -7,6 +7,7 @@ import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
 import { validateChecked } from './assets/validate-checked.js';
 import { select } from './assets/itsSelect.js';
+
 import {
   animateHeader,
   smoothScrollTitle,
@@ -21,11 +22,12 @@ import {
   cookiesAccept,
   shadowScrollHeader,
   sidebarMenuHandle,
-  toggleModal,
+  // toggleModal,
   lineMarquee,
 } from './layouts/layouts.js';
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+select();
 loaded('.preloader');
 fadeInColumn('.its-col');
 fadeInBlock('.its-block');
@@ -39,7 +41,7 @@ anchorsSmoothScrolling();
 sidebarMenuHandle();
 dynamicAdaptive();
 shadowScrollHeader();
-select();
+
 // toggleModal();
 if (!isMobile) {
   smoother();

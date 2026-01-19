@@ -3,9 +3,14 @@
 
 .section-relations {
   background-color: #abc5ee5d;
+
   // .section-relations__body
   &__body {
     padding-block: 6rem !important;
+
+    @include screen-490 {
+      padding-block: 4rem !important;
+    }
   }
 }
 
@@ -22,6 +27,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    @include screen-768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-490 {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .relations-list__column

@@ -202,16 +202,17 @@
 
 .t-h1 {
   font-size: 64px;
+  line-height: 100%;
   filter: contrast(120%);
 
   @include minmax-490-1920 {
     font-size: calc(
-      32px + (64 - 32) * ((100vw - 490px) / (1920 - 490))
+      28px + (64 - 28) * ((100vw - 490px) / (1920 - 490))
     ) !important;
   }
 
   @include screen-490 {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 }
 .t-h2 {
@@ -315,8 +316,7 @@
   align-items: center;
   justify-content: center;
 
-  // height: 5.6rem;
-  border-radius: 10px;
+  border-radius: 5px;
 
   font-family: $font-family-title;
   font-weight: 400;

@@ -8,8 +8,7 @@
     padding-block: 6rem !important;
 
     @include screen-490 {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-block: 4rem !important;
     }
   }
 

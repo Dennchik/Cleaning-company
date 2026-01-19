@@ -8,7 +8,7 @@
     color: #fff;
 
     @include screen-490 {
-      padding-block: 32px;
+      padding-block: 4rem !important;
     }
   }
 
@@ -31,6 +31,7 @@
 
     @include screen-768 {
       flex-direction: column;
+      row-gap: 3rem;
     }
   }
 
@@ -182,6 +183,11 @@
     }
   }
 
+  // .order-form__line
+  &__line {
+    overflow: hidden;
+    border-radius: 5px;
+  }
   // .order-form__item
   &__item {
     width: 100%;

@@ -5,10 +5,10 @@
   position: relative;
   // .section-cooperation__body
   &__body {
-    padding: 6rem 0;
+    padding-block: 6rem !important;
 
     @include screen-490 {
-      padding: 16px 0;
+      padding-block: 4rem !important;
     }
   }
 

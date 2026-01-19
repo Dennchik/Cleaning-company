@@ -5,9 +5,14 @@
   border-top: 2px solid rgb(25 42 75);
   border-bottom: 2px solid rgb(25 42 75);
   background-color: #abc5ee5d;
+
   // .section-survey__body
   &__body {
     padding-block: 6rem !important;
+
+    @include screen-490 {
+      padding-block: 4rem !important;
+    }
   }
   // .section-survey__content
   &__content {

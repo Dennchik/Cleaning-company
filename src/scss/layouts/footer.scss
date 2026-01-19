@@ -13,7 +13,7 @@
 
     font-size: 1.4rem;
     line-height: 150%;
-    color: #fff;
+    color: #a6c9ff;
 
     @include screen-490 {
       justify-content: start;
@@ -44,7 +44,7 @@
   // .footer__body
   &__body {
     padding: 6rem 0;
-    color: #fff;
+    color: #a6c9ff;
   }
 
   &__header {
@@ -213,7 +213,7 @@
   &__text {
     font-weight: 300;
     line-height: 130%;
-    color: #fff;
+    color: #a6c9ff;
     opacity: 0.8;
   }
 }

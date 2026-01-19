@@ -8,7 +8,7 @@
     color: #fff;
 
     @include screen-490 {
-      padding-block: 32px;
+      padding-block: 4rem !important;
     }
   }
 
@@ -34,18 +34,13 @@
     position: relative;
     display: flex;
     column-gap: 6rem;
+    margin-bottom: 2rem;
 
     &:nth-child(1) {
       z-index: 9;
 
-      @include min-768 {
-        margin-bottom: 2rem;
-
-        .section-order__column {
-          @include screen-768 {
-            margin-bottom: 12px;
-          }
-        }
+      @include screen-768 {
+        row-gap: 3rem;
       }
     }
 
@@ -55,6 +50,10 @@
 
     @include screen-768 {
       flex-direction: column;
+
+      &:nth-child(2) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -72,7 +71,7 @@
     color: $font-color-secondary;
 
     &:not(:last-child) {
-      margin-bottom: 1.4rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -87,6 +86,10 @@
     max-width: 300px;
 
     color: $font-color-title;
+
+    @include screen-768 {
+      max-width: 100%;
+    }
 
     @include min-768 {
       justify-content: start;
@@ -119,10 +122,6 @@
   &__checkbox {
     display: flex;
     gap: 1rem;
-
-    @include screen-768 {
-      margin-bottom: 3rem;
-    }
   }
 
   .checkbox {

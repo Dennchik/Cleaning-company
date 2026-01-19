@@ -4,10 +4,10 @@
 .section-info {
   // .section-info__body
   &__body {
-    padding: 6rem 0;
+    padding-block: 6rem !important;
 
     @include screen-490 {
-      padding: 16px 0;
+      padding-block: 4rem !important;
     }
   }
 
@@ -40,7 +40,7 @@
     @include screen-690 {
       flex: 0 1 auto;
     }
-    &:nth-child(2) {
+    &:nth-child(1) {
       @include screen-690 {
         display: none;
       }
